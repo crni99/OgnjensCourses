@@ -1,0 +1,11 @@
+import React from 'react';
+
+export default function Lead({ title, paragraph1, paragraph2 }) {
+    return (
+        <div>
+            <h1 className="display-4 text-center">{title}</h1>
+            {paragraph1 && <p className="lead text-center">{paragraph1}</p>}
+            {paragraph2 && <p>{paragraph2}</p>}
+        </div>
+    );
+};
