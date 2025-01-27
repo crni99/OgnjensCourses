@@ -2,16 +2,12 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    padding-top: 50px;
-    font-family: 'Inter', sans-serif;
-    background-color: #121212;
-    color: #e0e0e0;
+.navbar {
+    background-color: #2a2e32 !important;
 }
 
-h1,
-h2 {
-    color: #fff;
+body {
+    font-family: 'Inter', sans-serif;
 }
 
 h1 {
@@ -22,7 +18,6 @@ h1 {
 h2 {
     font-weight: 600;
     margin-top: 40px;
-    border-bottom: 2px solid #444;
     padding-bottom: 5px;
 }
 
@@ -31,7 +26,6 @@ ul,
 ol {
     font-size: 1rem;
     line-height: 1.6;
-    color: #D4D4D4;
 }
 
 ul,
@@ -199,4 +193,51 @@ pre[class*="language-"] {
     background-color: #c52e76;
     border-color: #c52e76;
     box-shadow: none;
+}
+
+.custom-lead {
+    padding-top: 2rem;
+}
+
+.footer {
+    background-color: #2a2e32 !important;
+    color: white !important;
+}
+
+.footer-text {
+    padding: 20px;
+}
+
+.footer-text a {
+    color: #fff; /* White color for the icons */
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    color: #007bff; /* Blue color on hover */
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fab, .fas {
+    font-size: 24px;
+}
+
+.custom-icon {
+    color: #e0e0e0;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.custom-icon:hover {
+    color: #d63384;
+}
+
+.custom-icon:active,
+.custom-icon:focus {
+    color: #c52e76;
 }
