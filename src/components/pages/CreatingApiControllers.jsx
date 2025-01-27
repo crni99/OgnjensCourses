@@ -127,11 +127,7 @@ public ActionResult<string> CreateProduct([FromBody] string product)
                 created resource.</p>
             <p>
                 <code>[FromBody]</code> binds the product parameter to the request body, meaning it expects data
-                to be passed
-                in the body of the request.
-                PUT Updating Resources
-                The PUT method is used for updating an existing resource. This method replaces the entire
-                resource.
+                to be passed in the body of the request.
             </p>
             <Section>
                 <h2>PUT - Updating Resources</h2>
@@ -147,6 +143,10 @@ public IActionResult UpdateProduct(int id, [FromBody] string product)
     return NoContent(); // Return 204 No Content indicating the update was successful
 }`} />
                 <br></br>
+                <p>
+                    The PUT method is used for updating an existing resource. This method replaces the entire
+                    resource.
+                </p>
                 <p><code>NoContent()</code> returns a 204 No Content status, indicating that the update was
                     successful with no additional content in the response.</p>
             </Section>
@@ -178,7 +178,7 @@ public IActionResult PartiallyUpdateProduct(int id, [FromBody] string product)
 [HttpDelete("{id}")]
 public IActionResult DeleteProduct(int id)
 {
-    if (id &lt; 0 || id &gt;= Products.Count)
+    if (id < 0 || id >= Products.Count)
     {
         return NotFound();
     }
@@ -223,7 +223,7 @@ public IActionResult DeleteProduct(int id)
                 <p>Keep these practices in mind as you continue to expand your API. A well-structured API is easy to
                     understand, use, and extend.</p>
             </Section>
-            
+
         </>
     );
 }

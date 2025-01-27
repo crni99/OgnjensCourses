@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 
 export default function HomeSection({ title, paragraph1, boldPart = "Key Takeaways: ", paragraph2, targetURL, linkTitle = "Learn More" }) {
 
-    console.log("Target URL:", targetURL);
-
     return (
         <div className="section-title">
             <h2>{title}</h2>
