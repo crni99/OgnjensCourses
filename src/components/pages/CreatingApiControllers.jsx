@@ -92,7 +92,7 @@ namespace MyApiProject.Controllers
                 <h2>GET - Retrieving Resources</h2>
                 <CodeSnippet language="csharp" code={`// GET api/products
 [HttpGet]
-public ActionResult<IEnumerable<string>>GetProducts()
+public ActionResult<IEnumerable<string>> GetProducts()
 {
     return Ok(Products); // Return the list of products with a 200 OK status
 }
@@ -188,7 +188,7 @@ public IActionResult DeleteProduct(int id)
                 <br></br>
                 <p>The DELETE method is used to remove a resource from the server.
                 </p>
-                <p><code>RemoveAt(id)</code> removes the product from the list at the specified index, and
+                <p><code>RemoveAt(id)</code> removes the product from the list at the specified index, and&nbsp;
                     <code>NoContent()</code> indicates that the resource was successfully deleted.
                 </p>
             </Section>
@@ -207,7 +207,7 @@ public IActionResult DeleteProduct(int id)
                     </li>
                     <li><strong>Error Handling:</strong> Always handle errors gracefully with appropriate HTTP
                         status codes like 404 (Not Found), 400 (Bad Request), or 500 (Internal Server Error).</li>
-                    <li><strong>Use ActionResult&lt;T&gt;:</strong> Returning <code>ActionResult&lt;T&gt;</code>
+                    <li><strong>Use ActionResult&lt;T&gt;:</strong> Returning <code>ActionResult&lt;T&gt;&nbsp;</code>
                         instead of just <code>T</code> allows you to return different HTTP status codes (e.g.,
                         NotFound, BadRequest) with the response data.</li>
                 </ul>

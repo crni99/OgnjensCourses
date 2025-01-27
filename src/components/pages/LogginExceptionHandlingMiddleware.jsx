@@ -86,33 +86,33 @@ export default function LogginExceptionHandlingMiddleware() {
                     unhandled exceptions, log them, and return a consistent error response.
                 </p>
                 <CodeSnippet language="csharp" code={`public class ExceptionHandlingMiddleware
-                        {
-                            private readonly RequestDelegate _next;
-                        private readonly ILogger<ExceptionHandlingMiddleware> _logger;
+{
+    private readonly RequestDelegate _next;
+    private readonly ILogger<ExceptionHandlingMiddleware> _logger;
 
-                            public ExceptionHandlingMiddleware(RequestDelegate next, ILogger<ExceptionHandlingMiddleware> logger)
-                                {
-                                    _next = next;
-                                _logger = logger;
+    public ExceptionHandlingMiddleware(RequestDelegate next, ILogger<ExceptionHandlingMiddleware> logger)
+    {
+        _next = next;
+        _logger = logger;
     }
 
-                                public async Task InvokeAsync(HttpContext httpContext)
-                                {
+    public async Task InvokeAsync(HttpContext httpContext)
+    {
         try
-                                {
-                                    await _next(httpContext);  // Pass the request to the next middleware
+        {
+            await _next(httpContext);  // Pass the request to the next middleware
         }
-                                catch (Exception ex)
-                                {
-                                    _logger.LogError(ex, "An unexpected error occurred.");
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "An unexpected error occurred.");
 
-                                // Return a generic error response
-                                httpContext.Response.StatusCode = 500;
-                                httpContext.Response.ContentType = "application/json";
+            // Return a generic error response
+            httpContext.Response.StatusCode = 500;
+            httpContext.Response.ContentType = "application/json";
 
-                                var errorResponse = new {Message = "An unexpected error occurred. Please try again later."};
+            var errorResponse = new {Message = "An unexpected error occurred. Please try again later."};
 
-                                await httpContext.Response.WriteAsJsonAsync(errorResponse);
+            await httpContext.Response.WriteAsJsonAsync(errorResponse);
         }
     }
 }`} />

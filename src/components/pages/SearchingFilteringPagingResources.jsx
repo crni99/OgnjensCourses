@@ -54,7 +54,7 @@ namespace MyApiProject.Controllers
 
         // GET: api/products?pageNumber=1&pageSize=10
         [HttpGet]
-        public async Task<ctionResult> GetPagedProducts(int pageNumber = 1, int pageSize = 10)
+        public async Task<ActionResult> GetPagedProducts(int pageNumber = 1, int pageSize = 10)
         {
             var products = await _context.Products
                 .Skip((pageNumber - 1) * pageSize)  // Skips records based on page number
@@ -84,7 +84,7 @@ namespace MyApiProject.Controllers
                 <p>Filtering allows users to narrow down search results based on specific criteria, such as category
                     or price range.</p>
                 <CodeSnippet language="csharp" code={`[HttpGet]
-public async Task<ActionResult>GetFilteredProducts(
+public async Task<ActionResult> GetFilteredProducts(
     string category = null, 
     decimal? minPrice = null, 
     decimal? maxPrice = null, 

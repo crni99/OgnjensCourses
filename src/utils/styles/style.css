@@ -209,12 +209,14 @@ pre[class*="language-"] {
 }
 
 .footer-text a {
-    color: #fff; /* White color for the icons */
+    color: #fff;
+    /* White color for the icons */
     text-decoration: none;
 }
 
 .footer-text a:hover {
-    color: #007bff; /* Blue color on hover */
+    color: #007bff;
+    /* Blue color on hover */
 }
 
 .footer .container {
@@ -223,7 +225,8 @@ pre[class*="language-"] {
     align-items: center;
 }
 
-.fab, .fas {
+.fab,
+.fas {
     font-size: 24px;
 }
 
@@ -240,4 +243,61 @@ pre[class*="language-"] {
 .custom-icon:active,
 .custom-icon:focus {
     color: #c52e76;
+}
+
+.page-navigation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.page-navigation-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+.page-navigation-button {
+    max-width: 200px;
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: #d63384;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.page-navigation-button:hover {
+    background-color: #b02a6b;
+}
+
+.page-navigation-button.mb-md-0 {
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .page-navigation-buttons {
+        flex-direction: row;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .page-navigation-button {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-navigation-button {
+        width: 90%;
+        margin-bottom: 1rem;
+    }
 }

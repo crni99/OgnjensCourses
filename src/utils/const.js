@@ -20,6 +20,28 @@ export const PageRoutes = {
     SCALING_OPTIMIZING_API: '/scaling-optimizing-api',
 };
 
+export const RouteList = [
+    { path: PageRoutes.GETTING_STARTED_DOTNET_API },
+    { path: PageRoutes.ENTITY_FRAMEWORK_CORE_SETUP },
+    { path: PageRoutes.CREATING_API_CONTROLLERS },
+    { path: PageRoutes.MANIPULATING_RESOURCES_VALIDATING_INPUT },
+    { path: PageRoutes.VALIDATING_INPUT_DATA_ANNOTATIONS },
+    { path: PageRoutes.WORKING_WITH_SERVICES_DEPENDENCY_INJECTION },
+    { path: PageRoutes.HANDLING_ASYNCHRONOUS_REQUESTS },
+    { path: PageRoutes.SEARCHING_FILTERING_PAGING_RESOURCES },
+    { path: PageRoutes.SECURING_API_AUTHENTICATION_AUTHORIZATION },
+    { path: PageRoutes.ADVANCED_API_SECURITY_OAUTH_JWT_HTTPS },
+    { path: PageRoutes.HANDLING_CORS_REQUESTS },
+    { path: PageRoutes.LOGGING_EXCEPTION_HANDLING_MIDDLEWARE },
+    { path: PageRoutes.ERROR_RESPONSE_STATUS_CODES },
+    { path: PageRoutes.API_RATE_LIMITING },
+    { path: PageRoutes.VERSIONING_DOCUMENTING_API_SWAGGER },
+    { path: PageRoutes.UNIT_TESTING_XUNIT },
+    { path: PageRoutes.MONITORING_APPLICATION_HEALTHCHECKS },
+    { path: PageRoutes.IMPROVING_PERFORMANCE_CACHING },
+    { path: PageRoutes.SCALING_OPTIMIZING_API },
+];
+
 export const PageNames = {
     GETTING_STARTED_DOTNET_API: 'Getting Started .NET API',
     ENTITY_FRAMEWORK_CORE_SETUP: 'Entity Framework Core Setup',

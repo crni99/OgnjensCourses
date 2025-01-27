@@ -76,7 +76,7 @@ export default function ApiRateLimiting() {
     private const int MaxRequestsPerMinute = 100;
     private const int TimeWindowInMinutes = 1;
 
-    public RateLimitingMiddleware(RequestDelegate next, ILogger<RateLimitingMiddleware&gt; logger)
+    public RateLimitingMiddleware(RequestDelegate next, ILogger<RateLimitingMiddleware> logger)
     {
         _next = next;
         _logger = logger;

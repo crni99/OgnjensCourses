@@ -131,7 +131,7 @@ namespace MyApiProject.Controllers
 
         // GET api/products
         [HttpGet]
-        public ActionResult<IEnumerable>string>> Get()
+        public ActionResult<IEnumerable<string>> Get()
         {
             return Ok(Products);
         }

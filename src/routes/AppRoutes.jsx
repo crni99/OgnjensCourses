@@ -21,27 +21,33 @@ import MonitoringApplicationHealthChecks from "../components/pages/MonitoringApp
 import ImprovingPerformancesCaching from "../components/pages/ImprovingPerformancesCaching.jsx";
 import ScalingOptimizingApi from "../components/pages/ScalingOptimizingApi.jsx";
 
+const routeList = [
+    { path: PageRoutes.GETTING_STARTED_DOTNET_API, component: <GettinStartedDotNetApi /> },
+    { path: PageRoutes.ENTITY_FRAMEWORK_CORE_SETUP, component: <EntityFrameworkCoreSetup /> },
+    { path: PageRoutes.CREATING_API_CONTROLLERS, component: <CreatingApiControllers /> },
+    { path: PageRoutes.MANIPULATING_RESOURCES_VALIDATING_INPUT, component: <ManipulatingResourcesValidatingInput /> },
+    { path: PageRoutes.VALIDATING_INPUT_DATA_ANNOTATIONS, component: <ValidatingInputDataAnnotations /> },
+    { path: PageRoutes.WORKING_WITH_SERVICES_DEPENDENCY_INJECTION, component: <WorkingWithServicesDependencyInjection /> },
+    { path: PageRoutes.HANDLING_ASYNCHRONOUS_REQUESTS, component: <HandlingAsynchronousRequests /> },
+    { path: PageRoutes.SEARCHING_FILTERING_PAGING_RESOURCES, component: <SearchingFilteringPagingResources /> },
+    { path: PageRoutes.SECURING_API_AUTHENTICATION_AUTHORIZATION, component: <SecuringApiAuthenticationAuthorization /> },
+    { path: PageRoutes.ADVANCED_API_SECURITY_OAUTH_JWT_HTTPS, component: <AdvancedApiSecurityOauthJwtHttps /> },
+    { path: PageRoutes.HANDLING_CORS_REQUESTS, component: <HandlingCorsRequests /> },
+    { path: PageRoutes.LOGGING_EXCEPTION_HANDLING_MIDDLEWARE, component: <LogginExceptionHandlingMiddleware /> },
+    { path: PageRoutes.ERROR_RESPONSE_STATUS_CODES, component: <ErrorResponseStatusCodes /> },
+    { path: PageRoutes.API_RATE_LIMITING, component: <ApiRateLimiting /> },
+    { path: PageRoutes.VERSIONING_DOCUMENTING_API_SWAGGER, component: <VersioningDocumentingApiSwagger /> },
+    { path: PageRoutes.UNIT_TESTING_XUNIT, component: <UnitTestingXunit /> },
+    { path: PageRoutes.MONITORING_APPLICATION_HEALTHCHECKS, component: <MonitoringApplicationHealthChecks /> },
+    { path: PageRoutes.IMPROVING_PERFORMANCE_CACHING, component: <ImprovingPerformancesCaching /> },
+    { path: PageRoutes.SCALING_OPTIMIZING_API, component: <ScalingOptimizingApi /> }
+];
+
 const AppRoutes = (
     <>
-        <Route path={PageRoutes.GETTING_STARTED_DOTNET_API} element={<GettinStartedDotNetApi />} />
-        <Route path={PageRoutes.ENTITY_FRAMEWORK_CORE_SETUP} element={<EntityFrameworkCoreSetup />} />
-        <Route path={PageRoutes.CREATING_API_CONTROLLERS} element={<CreatingApiControllers />} />
-        <Route path={PageRoutes.MANIPULATING_RESOURCES_VALIDATING_INPUT} element={<ManipulatingResourcesValidatingInput />} />
-        <Route path={PageRoutes.VALIDATING_INPUT_DATA_ANNOTATIONS} element={<ValidatingInputDataAnnotations />} />
-        <Route path={PageRoutes.WORKING_WITH_SERVICES_DEPENDENCY_INJECTION} element={<WorkingWithServicesDependencyInjection />} />
-        <Route path={PageRoutes.HANDLING_ASYNCHRONOUS_REQUESTS} element={<HandlingAsynchronousRequests />} />
-        <Route path={PageRoutes.SEARCHING_FILTERING_PAGING_RESOURCES} element={<SearchingFilteringPagingResources />} />
-        <Route path={PageRoutes.SECURING_API_AUTHENTICATION_AUTHORIZATION} element={<SecuringApiAuthenticationAuthorization />} />
-        <Route path={PageRoutes.ADVANCED_API_SECURITY_OAUTH_JWT_HTTPS} element={<AdvancedApiSecurityOauthJwtHttps />} />
-        <Route path={PageRoutes.HANDLING_CORS_REQUESTS} element={<HandlingCorsRequests />} />
-        <Route path={PageRoutes.LOGGING_EXCEPTION_HANDLING_MIDDLEWARE} element={<LogginExceptionHandlingMiddleware />} />
-        <Route path={PageRoutes.ERROR_RESPONSE_STATUS_CODES} element={<ErrorResponseStatusCodes />} />
-        <Route path={PageRoutes.API_RATE_LIMITING} element={<ApiRateLimiting />} />
-        <Route path={PageRoutes.VERSIONING_DOCUMENTING_API_SWAGGER} element={<VersioningDocumentingApiSwagger />} />
-        <Route path={PageRoutes.UNIT_TESTING_XUNIT} element={<UnitTestingXunit />} />
-        <Route path={PageRoutes.MONITORING_APPLICATION_HEALTHCHECKS} element={<MonitoringApplicationHealthChecks />} />
-        <Route path={PageRoutes.IMPROVING_PERFORMANCE_CACHING} element={<ImprovingPerformancesCaching />} />
-        <Route path={PageRoutes.SCALING_OPTIMIZING_API} element={<ScalingOptimizingApi />} />
+        {routeList.map(route => (
+            <Route key={route.path} path={route.path} element={route.component} />
+        ))}
     </>
 );
 

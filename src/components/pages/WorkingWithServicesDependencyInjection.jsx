@@ -50,7 +50,7 @@ export default function WorkingWithServicesDependencyInjection() {
 {
     public interface IProductService
     {
-        IEnumerable&lt;Product&gt; GetAllProducts();
+        IEnumerable<Product> GetAllProducts();
         Product GetProductById(int id);
         void CreateProduct(Product product);
         void UpdateProduct(int id, Product product);
@@ -69,7 +69,7 @@ export default function WorkingWithServicesDependencyInjection() {
 
             <Section>
                 <h2>Step 2: Implement the Service</h2>
-                <p>Next, let's implement the service by creating a class that implements the
+                <p>Next, let's implement the service by creating a class that implements the&nbsp;
                     <code>IProductService</code> interface. This class will contain the business logic for managing
                     products.
                 </p>
@@ -148,7 +148,7 @@ export default function WorkingWithServicesDependencyInjection() {
         var builder = WebApplication.CreateBuilder(args);
 
         // Register services with DI container
-        builder.Services.AddScoped&lt;IProductService, ProductService&gt;();
+        builder.Services.AddScoped<IProductService, ProductService>();
 
         builder.Services.AddControllers();
         var app = builder.Build();

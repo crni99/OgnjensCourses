@@ -90,10 +90,12 @@ export default function ErrorResponseStatusCodes() {
                 </ul>
                 <p>Example Error Response Structure:</p>
                 <CodeSnippet language="json" code={`{
-    "error": {
+    "error": 
+    {
         "code": "invalid_input",
         "message": "The input data is invalid.",
-        "details": [
+        "details": 
+        [
             {
                 "field": "email",
                 "message": "Email address is required."

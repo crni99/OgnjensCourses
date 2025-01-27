@@ -15,11 +15,21 @@ export default function Header() {
             document.body.classList.remove('bg-light');
             document.body.classList.add('text-light');
             document.body.classList.remove('text-dark');
+
+            const dropdownMenus = document.querySelectorAll('.dropdown-menu');
+            dropdownMenus.forEach(menu => {
+                menu.classList.add('dropdown-menu-dark');
+            });
         } else {
             document.body.classList.add('bg-light');
             document.body.classList.remove('bg-dark');
             document.body.classList.add('text-dark');
             document.body.classList.remove('text-light');
+
+            const dropdownMenus = document.querySelectorAll('.dropdown-menu');
+            dropdownMenus.forEach(menu => {
+                menu.classList.remove('dropdown-menu-dark');
+            });
         }
     }, [isDarkMode]);
 
@@ -34,7 +44,7 @@ export default function Header() {
         <header>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm mb-3">
                 <div className="container">
-                    <a className="navbar-brand" href="/">Ognjen Courses</a>
+                    <a className="navbar-brand" href="/">Ognjen's Courses</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>

@@ -48,14 +48,14 @@ namespace MyApiProject.Models
     {
         [Required]
         [StringLength(100, MinimumLength = 3)]
-        public string Name {get; set; }
+        public string Name { get; set; }
 
         [Required]
         [Range(0.01, 9999.99)]
-        public decimal Price {get; set; }
+        public decimal Price { get; set; }
 
         [StringLength(500)]
-        public string Description {get; set; }
+        public string Description { get; set; }
     }
 }`} />
                 <br></br>
@@ -103,7 +103,7 @@ public ActionResult<Product> CreateProduct([FromBody] Product product)
                 <CodeSnippet language="csharp" code={`[HttpPut("{id}")]
 public IActionResult UpdateProduct(int id, [FromBody] Product product)
 {
-    if (id &lt; 0 || id &gt;= Products.Count)
+    if (id < 0 || id >= Products.Count)
     {
         return NotFound();  // Return 404 if product with given ID doesn't exist
     }
@@ -132,7 +132,7 @@ public IActionResult UpdateProduct(int id, [FromBody] Product product)
                 <CodeSnippet language="csharp" code={`[HttpPatch("{id}")]
 public IActionResult PartiallyUpdateProduct(int id, [FromBody] JsonPatchDocument&lt;Product&gt; patchDoc)
 {
-    if (id &lt; 0 || id &gt;= Products.Count)
+    if (id < 0 || id >= Products.Count)
     {
         return NotFound();  // Return 404 if product with given ID doesn't exist
     }
@@ -220,7 +220,7 @@ public IActionResult PartiallyUpdateProduct(int id, [FromBody] JsonPatchDocument
                 <p>Let’s say you have a Product entity in a database and want to perform multiple operations, such
                     as creating a product and updating an existing one, in a single transaction.
                 </p>
-                <CodeSnippet language="csharp" code={`public async Task<ActionResult<Product>>>CreateAndUpdateProductAsync(Product newProduct, int updateProductId)
+                <CodeSnippet language="csharp" code={`public async Task<ActionResult<Product>> CreateAndUpdateProductAsync(Product newProduct, int updateProductId)
 {
     using (var transaction = await _context.Database.BeginTransactionAsync())
     {

@@ -172,7 +172,7 @@ dotnet add package xunit.runner.visualstudio`} />
     public void GetProduct_ReturnsCorrectProduct()
     {
         // Arrange
-        var mockRepository = new Mock&lt;IProductRepository&gt;();
+        var mockRepository = new Mock<IProductRepository>();
         mockRepository.Setup(repo => repo.GetById(1)).Returns(new Product { Id = 1, Name = "Product 1" });
         var productService = new ProductService(mockRepository.Object);
 

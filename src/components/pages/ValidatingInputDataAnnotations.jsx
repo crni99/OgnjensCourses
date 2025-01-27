@@ -47,20 +47,20 @@ namespace MyApiProject.Models
 {
     public class Product
     {
-        public int Id {get; set; }
+        public int Id { get; set; }
 
         [Required(ErrorMessage = "Product name is required.")]
         [StringLength(100, ErrorMessage = "Product name cannot be longer than 100 characters.")]
-        public string Name {get; set; }
+        public string Name { get; set; }
 
         [Range(0.01, 10000, ErrorMessage = "Price must be between 0.01 and 10,000.")]
-        public decimal Price {get; set; }
+        public decimal Price { get; set; }
 
         [StringLength(500, ErrorMessage = "Description cannot exceed 500 characters.")]
-        public string Description {get; set; }
+        public string Description { get; set; }
 
         [EmailAddress(ErrorMessage = "Invalid email address format.")]
-        public string ManufacturerEmail {get; set; }
+        public string ManufacturerEmail { get; set; }
     }
 }`} />
                 <br></br>
@@ -146,7 +146,7 @@ namespace MyApiProject.Validation
                 <br></br>
                 <p>In this example:</p>
                 <ul>
-                    <li>The <code>PriceMultipleOfHalfAttribute</code> class inherits from
+                    <li>The <code>PriceMultipleOfHalfAttribute</code> class inherits from&nbsp;
                         <code>ValidationAttribute</code>.
                     </li>
                     <li>We override the <code>IsValid</code> method to ensure the price is a multiple of 0.5.</li>
@@ -178,7 +178,7 @@ namespace MyApiProject.Validation
 }`} />
                 <br></br>
                 <p>Here, the <code>Price</code> property is validated with both the built-in <code>[Range]</code>
-                    annotation and the custom <code>[PriceMultipleOfHalf]</code> annotation. If the price is not a
+                    &nbsp;annotation and the custom <code>[PriceMultipleOfHalf]</code> annotation. If the price is not a
                     multiple of 0.5, the custom error message will be shown.</p>
             </Section>
 

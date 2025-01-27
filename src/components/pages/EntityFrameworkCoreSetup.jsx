@@ -60,10 +60,10 @@ export default function EntityFrameworkCoreSetup() {
 {
     public class Product
     {
-        public int Id {get; set; }  // Primary Key
-        public string Name {get; set; }
-        public decimal Price {get; set; }
-        public string Description {get; set; }
+        public int Id { get; set; }  // Primary Key
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public string Description { get; set; }
     }
 }`} />
                 <br></br>
@@ -86,7 +86,7 @@ namespace MyApiProject.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options) { }
 
-        public DbSet<Product> Products {get; set; }  // Represents the Products table in the database
+        public DbSet<Product> Products { get; set; }  // Represents the Products table in the database
     }
 }`} />
                 <br></br>
@@ -112,7 +112,7 @@ using MyApiProject.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add DbContext to the DI container
-builder.Services.AddDbContext&lt;ApplicationDbContext&gt;(options =>
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddControllers();
