@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import GroupItemNetApi from './GroupItemNetApi';
+import GroupItemReact from './GroupItemReact';
 
 export default function Header() {
 
@@ -51,6 +52,7 @@ export default function Header() {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
                             <GroupItemNetApi />
+                            <GroupItemReact />
                         </ul>
                     </div>
                 </div>
