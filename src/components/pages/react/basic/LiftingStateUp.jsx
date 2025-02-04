@@ -165,7 +165,7 @@ export default ParentComponent;`} />
         <p>Lifting state up is a powerful technique in React that helps manage shared state between components. By lifting state to a common ancestor, you ensure that the state is centrally managed, reducing redundancy and making it easier to maintain. This pattern is essential for building more complex React applications with components that need to communicate with one another.</p>
       </Section>
 
-      <PageNavigation prevPage={RoutePath.FORMS_AND_CONTROLLED_COMPONENTS} nextPage={RoutePath.CONTEXT_API_STATE_MANAGEMENT} />
+      <PageNavigation prevPage={RoutePath.FORMS_AND_CONTROLLED_COMPONENTS} nextPage={RoutePath.INTRODUCTION_TO_HOOKS} />
     </>
   );
 }

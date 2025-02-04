@@ -77,6 +77,27 @@ export default function ReactBasicHome() {
             />
 
             <HomeSection
+                title="Introduction to Hooks: Managing State and Effects in Functional Components"
+                paragraph1="Get started with React hooks and learn how to manage component state and side effects using `useState` and `useEffect`."
+                paragraph2="Dive into the world of functional components and the hooks that make them powerful."
+                targetURL={RoutePath.INTRODUCTION_TO_HOOKS}
+            />
+
+            <HomeSection
+                title="Working with Effects (useEffect): Handling Side Effects"
+                paragraph1="Understand how to manage side effects in React using the `useEffect` hook. This is essential for handling things like API calls, subscriptions, and other asynchronous tasks."
+                paragraph2="Write effectful code using `useEffect` to interact with external APIs or handle component lifecycle events."
+                targetURL={RoutePath.WORKING_WITH_EFFECTS_USEEFFECT}
+            />
+
+            <HomeSection
+                title="Advanced Hooks (useMemo & useCallback): Optimizing Performance"
+                paragraph1="Learn how to use `useMemo` and `useCallback` to optimize performance and prevent unnecessary re-renders in React."
+                paragraph2="Explore advanced hook usage to keep your app fast and efficient by memoizing values and callbacks."
+                targetURL={RoutePath.ADVANCED_HOOKS_USEMEMO_USECALLBACK}
+            />
+
+            <HomeSection
                 title="Context API & State Management: Global State in React"
                 paragraph1="Explore the React Context API for managing global state. Learn how to avoid prop drilling and create shared state across the component tree."
                 paragraph2="Implement the Context API to manage global data like user authentication status or theme preferences."
@@ -88,13 +109,6 @@ export default function ReactBasicHome() {
                 paragraph1="Learn how to add React Router to your project, handle dynamic routes, and create a navigable single-page application."
                 paragraph2="Implement client-side routing, nested routes, and navigate between pages in your React app."
                 targetURL={RoutePath.REACT_ROUTER_NAVIGATION}
-            />
-
-            <HomeSection
-                title="Working with Effects (useEffect): Handling Side Effects"
-                paragraph1="Understand how to manage side effects in React using the `useEffect` hook. This is essential for handling things like API calls, subscriptions, and other asynchronous tasks."
-                paragraph2="Write effectful code using `useEffect` to interact with external APIs or handle component lifecycle events."
-                targetURL={RoutePath.WORKING_WITH_EFFECTS_USEEFFECT}
             />
 
             <HomeSection
@@ -111,19 +125,9 @@ export default function ReactBasicHome() {
                 targetURL={RoutePath.HANDLING_ERRORS_BOUNDARIES}
             />
 
-            <HomeSection
-                title="Introduction to Hooks: Managing State and Effects in Functional Components"
-                paragraph1="Get started with React hooks and learn how to manage component state and side effects using `useState` and `useEffect`."
-                paragraph2="Dive into the world of functional components and the hooks that make them powerful."
-                targetURL={RoutePath.INTRODUCTION_TO_HOOKS}
-            />
 
-            <HomeSection
-                title="Advanced Hooks (useMemo & useCallback): Optimizing Performance"
-                paragraph1="Learn how to use `useMemo` and `useCallback` to optimize performance and prevent unnecessary re-renders in React."
-                paragraph2="Explore advanced hook usage to keep your app fast and efficient by memoizing values and callbacks."
-                targetURL={RoutePath.ADVANCED_HOOKS_USEMEMO_USECALLBACK}
-            />
+
+
 
             <HomeSection
                 title="Testing React Components: Ensuring Quality with Unit Tests"

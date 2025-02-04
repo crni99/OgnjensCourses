@@ -15,13 +15,13 @@ export default function ConditionalRendering() {
 
       <Section>
         <h2>What is Conditional Rendering?</h2>
-        <p>Conditional rendering refers to the ability to render different elements based on certain conditions. This is commonly used to render components, messages, or UI elements based on the current state of your application or user input.</p>
-        <p>In React, conditional rendering works similarly to how you might handle conditions in JavaScript: using <code>if</code> statements, ternary operators, and logical operators like <code>&&</code>.</p>
+        <p>Conditional rendering refers to rendering different elements or components based on certain conditions. This is commonly used to show or hide elements dynamically, display different UI states, or optimize rendering performance.</p>
+        <p>In React, conditional rendering works similarly to JavaScript conditions, using <code>if</code> statements, the ternary operator, logical operators, and <code>switch</code> statements.</p>
       </Section>
 
       <Section>
         <h2>Using If-Else for Conditional Rendering</h2>
-        <p>One of the most straightforward ways to handle conditional rendering in React is using an <code>if-else</code> statement inside the render method or functional component.</p>
+        <p><code>if-else</code> is the most basic way to handle conditional rendering in React.</p>
         <CodeSnippet language="jsx" code={`import React, { useState } from 'react';
 
 function WelcomeMessage() {
@@ -29,22 +29,18 @@ function WelcomeMessage() {
 
   if (isLoggedIn) {
     return <h1>Welcome Back!</h1>;
-  } else {
-    return <button onClick={() => setIsLoggedIn(true)}>Log In</button>;
-  }
+  } 
+  return <button onClick={() => setIsLoggedIn(true)}>Log In</button>;
 }
 
 export default WelcomeMessage;`} />
         <br></br>
-        <p>In this example, if the <code>isLoggedIn</code> state is true, the component will display a welcome message; otherwise, it will show a login button. This logic is implemented using a standard <code>if-else</code> statement.</p>
+        <p><strong>Best Practice:</strong> Avoid using <code>if-else</code> directly inside JSX because it can make the code harder to read.</p>
       </Section>
 
       <Section>
-        <h2>Using Ternary Operator</h2>
-        <p>The ternary operator is another common way to handle conditional rendering in React. It’s a concise way of writing an <code>if-else</code> statement. The syntax is:</p>
-        <CodeSnippet language="jsx" code={`condition ? expressionIfTrue : expressionIfFalse`} />
-        <br></br>
-        <p>Here’s an example of using the ternary operator in React:</p>
+        <h2>Using the Ternary Operator</h2>
+        <p>The ternary operator is a concise way to handle conditional rendering.</p>
         <CodeSnippet language="jsx" code={`import React, { useState } from 'react';
 
 function WelcomeMessage() {
@@ -59,12 +55,12 @@ function WelcomeMessage() {
 
 export default WelcomeMessage;`} />
         <br></br>
-        <p>In this example, the ternary operator checks if <code>isLoggedIn</code> is true. If so, it renders a welcome message, otherwise, it shows the login button.</p>
+        <p><strong>Best Practice:</strong> Use the ternary operator for simple conditions, but avoid nesting multiple ternary expressions as they reduce readability.</p>
       </Section>
 
       <Section>
         <h2>Using Logical AND (&&) Operator</h2>
-        <p>The logical AND operator can be useful when you want to render an element only if a certain condition is true, without needing an <code>else</code> case. Here's an example:</p>
+        <p>The <code>&&</code> operator can be used when you only need to render something **if a condition is true**, without an <code>else</code> case.</p>
         <CodeSnippet language="jsx" code={`import React, { useState } from 'react';
 
 function Notifications() {
@@ -82,12 +78,22 @@ function Notifications() {
 
 export default Notifications;`} />
         <br></br>
-        <p>In this example, if <code>hasNewNotifications</code> is true, the message "You have new notifications!" will be rendered. If the condition is false, nothing will be rendered. This is a compact and readable way to handle conditions without an <code>else</code> block.</p>
+        <p><strong>Important:</strong> If <code>hasNewNotifications</code> is <code>false</code>, React renders **nothing** instead of <code>false</code>.</p>
       </Section>
 
       <Section>
-        <h2>Using Switch Statement</h2>
-        <p>If you have multiple conditions to check, you can use a <code>switch</code> statement for more complex conditional rendering.</p>
+        <h2>Short-Circuiting with Logical OR (||)</h2>
+        <p>You can use the **Logical OR (`||`) operator** to display a default value when a condition is <code>false</code>.</p>
+        <CodeSnippet language="jsx" code={`function UserGreeting({ name }) {
+  return <h1>Hello, {name || "Guest"}!</h1>;
+}`} />
+        <br></br>
+        <p>Here, if <code>name</code> is **falsy** (e.g., `null`, `undefined`, `""`), it defaults to `"Guest"`.</p>
+      </Section>
+
+      <Section>
+        <h2>Using a Switch Statement</h2>
+        <p>For multiple conditions, using a **switch statement** can improve readability.</p>
         <CodeSnippet language="jsx" code={`import React, { useState } from 'react';
 
 function StatusMessage() {
@@ -116,13 +122,39 @@ function StatusMessage() {
 
 export default StatusMessage;`} />
         <br></br>
-        <p>In this example, the <code>switch</code> statement checks the current <code>status</code> and renders the appropriate message. This approach is useful when you have multiple possible outcomes.</p>
+        <p><strong>When to Use:</strong> Use the switch statement when dealing with multiple discrete cases.</p>
+      </Section>
+
+      <Section>
+        <h2>Lazy Loading for Performance Optimization</h2>
+        <p>Sometimes, components should only be loaded when needed. This can be done using React’s <code>lazy</code> and <code>Suspense</code> for **better performance**.</p>
+        <CodeSnippet language="jsx" code={`import React, { lazy, Suspense, useState } from 'react';
+
+const Profile = lazy(() => import('./Profile'));
+
+function App() {
+  const [showProfile, setShowProfile] = useState(false);
+
+  return (
+    <div>
+      <button onClick={() => setShowProfile(true)}>Load Profile</button>
+      {showProfile && (
+        <Suspense fallback={<p>Loading...</p>}>
+          <Profile />
+        </Suspense>
+      )}
+    </div>
+  );
+}
+
+export default App;`} />
+        <br></br>
+        <p><strong>Why?</strong> Lazy loading improves initial page load time by **deferring the loading of components** until they are needed.</p>
       </Section>
 
       <Section>
         <h2>Conditional Rendering in JSX</h2>
-        <p>Conditional rendering is an essential part of JSX, and as you can see, it can be implemented in many ways. It's important to note that when using JSX, the conditional logic must be placed inside the curly braces <code>{ }</code> in order for the expressions to be evaluated correctly.</p>
-        <p>For example:</p>
+        <p>Conditional rendering is a key part of JSX. Any valid JavaScript expression must be placed inside curly braces <code>{ }</code> for React to evaluate it.</p>
         <CodeSnippet language="jsx" code={`function App() {
   const isLoggedIn = true;
 
@@ -133,13 +165,21 @@ export default StatusMessage;`} />
   );
 }`} />
         <br></br>
-        <p>In this example, the message is displayed based on the value of <code>isLoggedIn</code>, using the ternary operator inside the JSX expression.</p>
+        <p>Here, the message is displayed dynamically based on the <code>isLoggedIn</code> state.</p>
       </Section>
 
       <Section>
         <h2>Conclusion</h2>
-        <p>Conditional rendering is a powerful feature in React that allows you to display different UI elements based on the current application state or user input. React provides several methods for conditional rendering, including <code>if-else</code>, the ternary operator, the logical AND operator, and <code>switch</code> statements, making it flexible to handle different use cases.</p>
-        <p>By mastering conditional rendering, you can create more dynamic and responsive applications that provide personalized content to users based on their interactions or application state.</p>
+        <p>React provides multiple ways to conditionally render elements:</p>
+        <ul>
+          <li><strong>If-else</strong>: Best for complex logic outside JSX.</li>
+          <li><strong>Ternary operator</strong>: Ideal for simple conditions.</li>
+          <li><strong>Logical AND (`&&`)</strong>: Renders when the condition is true.</li>
+          <li><strong>Logical OR (`||`)</strong>: Provides a fallback/default value.</li>
+          <li><strong>Switch statement</strong>: Best for multiple conditions.</li>
+          <li><strong>Lazy loading</strong>: Optimizes performance.</li>
+        </ul>
+        <p>Choosing the right approach depends on readability, maintainability, and performance needs.</p>
       </Section>
 
       <PageNavigation prevPage={RoutePath.HANDLING_EVENTS} nextPage={RoutePath.LISTS_AND_KEYS} />
