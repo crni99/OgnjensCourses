@@ -84,7 +84,7 @@ namespace MyApiProject.Controllers
                     <li><strong>DELETE:</strong> Delete data (remove).</li>
                 </ul>
 
-                <p>Let’s explore how these methods are implemented in a controller for a resource, such as
+                <p>Let’s explore how these methods are implemented in a controller for a resource, such as&nbsp;
                     <code>Product</code>.
                 </p>
             </Section>
