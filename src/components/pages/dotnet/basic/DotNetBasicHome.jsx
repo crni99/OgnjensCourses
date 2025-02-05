@@ -14,7 +14,7 @@ export default function DotNetBasicHome() {
                     you'll learn how to create powerful APIs that are easy to maintain and scale."
             />
 
-            <br></br>
+            <></>
 
             <HomeSection
                 title="Getting Started: Setting Up a .NET Project for API Development"

@@ -67,7 +67,6 @@ namespace MyApiProject.Controllers
         }
     }
 }`} />
-                <br></br>
                 <p><strong>Example Request:</strong> GET /api/products?pageNumber=2&pageSize=10</p>
                 <p>Explanation:</p>
                 <ul>
@@ -119,7 +118,6 @@ public async Task<ActionResult> GetFilteredProducts(
 
     return Ok(products);
 }`} />
-                <br></br>
                 <p><strong>Example Request:</strong> GET
                     /api/products?category=Electronics&minPrice=100&pageNumber=1&pageSize=10</p>
                 <p>Explanation:</p>
@@ -161,7 +159,6 @@ public async Task<ActionResult> SearchProducts(string searchTerm = null, int pag
 
     return Ok(products);
 }`} />
-                <br></br>
                 <p><strong>Example Request:</strong> GET /api/products?searchTerm=phone&pageNumber=1&pageSize=10</p>
                 <p>Explanation:</p>
                 <ul>
@@ -220,7 +217,6 @@ public async Task<ActionResult> GetProducts(
 
     return Ok(products);
 }`} />
-                <br></br>
                 <p><strong>Example Request:</strong> GET
                     /api/products?searchTerm=phone&category=Electronics&minPrice=100&pageNumber=2&pageSize=5</p>
                 <p>This request searches for products with the term "phone", filters by the "Electronics" category

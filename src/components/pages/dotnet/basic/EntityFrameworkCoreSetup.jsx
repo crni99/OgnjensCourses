@@ -42,12 +42,9 @@ export default function EntityFrameworkCoreSetup() {
                     <li>Open the NuGet Package Manager and install the following EF Core packages:</li>
                 </ol>
                 <CodeSnippet language="shell" code={`dotnet add package Microsoft.EntityFrameworkCore`} />
-                <br></br>
                 <CodeSnippet language="shell" code={`dotnet add package Microsoft.EntityFrameworkCore.SqlServer`} />
-                <br></br>
                 <CodeSnippet language="shell" code={`dotnet add package Microsoft.EntityFrameworkCore.Tools`} />
-                <br></br>
-                <p>The Microsoft.EntityFrameworkCore package is the core EF Core library, while
+                <p>The Microsoft.EntityFrameworkCore package is the core EF Core liary, while
                     Microsoft.EntityFrameworkCore.SqlServer is for SQL Server (use the appropriate package if you're
                     using another database). You can install these using the NuGet Package Manager Console or by
                     running the dotnet command in the terminal.</p>
@@ -68,7 +65,6 @@ export default function EntityFrameworkCoreSetup() {
         public string Description { get; set; }
     }
 }`} />
-                <br></br>
                 <p>The Product class represents a product entity with Id, Name, Price, and Description as its
                     properties. The Id property will be treated as the primary key by EF Core by convention.</p>
             </Section >
@@ -91,7 +87,6 @@ namespace MyApiProject.Data
         public DbSet<Product> Products { get; set; }  // Represents the Products table in the database
     }
 }`} />
-                <br></br>
                 <p>
                     In this example:
                 </p>
@@ -126,7 +121,6 @@ app.UseRouting();
 app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
 
 app.Run();`} />
-                <br></br>
                 <p>
                     In this example:
                 </p>
@@ -141,7 +135,6 @@ app.Run();`} />
     "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=MyApiDb;Trusted_Connection=True;"
   }
 }`} />
-                <br></br>
                 <p>
                     In this example:
                 </p>
@@ -159,12 +152,10 @@ app.Run();`} />
                 <p>First, add a migration to generate the database schema.
                 </p>
                 <CodeSnippet language="shell" code={`dotnet ef migrations add InitialCreate`} />
-                <br></br>
                 <p>This will generate migration files that contain instructions for creating the Products table in
                     the database.</p>
                 <p>5.2. Applying the Migration to the Database</p>
                 <CodeSnippet language="shell" code={`dotnet ef database update`} />
-                <br></br>
                 <p>
                     This command will create the database (if it doesn’t exist) and apply the migration to create
                     the Products table in the database.
@@ -257,7 +248,6 @@ namespace MyApiProject.Controllers
         }
     }
 }`} />
-                <br></br>
                 <p>
                     In this example:
                 </p>

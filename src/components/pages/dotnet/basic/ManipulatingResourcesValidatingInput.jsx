@@ -60,7 +60,6 @@ namespace MyApiProject.Models
         public string Description { get; set; }
     }
 }`} />
-                <br></br>
                 <p>Here’s what the annotations do:</p>
                 <ul>
                     <li><strong>[Required]:</strong> Ensures that the field is not null or empty.</li>
@@ -86,7 +85,6 @@ public ActionResult<Product> CreateProduct([FromBody] Product product)
 
     return CreatedAtAction(nameof(GetProduct), new {id = Products.Count - 1}, product);
 }`} />
-                <br></br>
                 <p>
                     In this example:
                 </p>
@@ -119,7 +117,6 @@ public IActionResult UpdateProduct(int id, [FromBody] Product product)
     Products[id] = product;
     return NoContent();  // Return 204 No Content to indicate success
 }`} />
-                <br></br>
                 <p>
                     In this example:
                 </p>
@@ -128,7 +125,6 @@ public IActionResult UpdateProduct(int id, [FromBody] Product product)
                     <li>Validate the input using ModelState.IsValid.</li>
                     <li>Update the product only if both validations pass.</li>
                 </ul>
-                <br></br>
                 <h3>Ensuring Valid Data with PATCH</h3>
                 <p>In case of partial updates, you should also ensure that the data being patched is valid.</p>
                 <CodeSnippet language="csharp" code={`[HttpPatch("{id}")]
@@ -154,7 +150,6 @@ public IActionResult PartiallyUpdateProduct(int id, [FromBody] JsonPatchDocument
 
     return NoContent();  // Return 204 No Content to indicate success
 }`} />
-                <br></br>
                 <p>
                     In this example:
                 </p>
@@ -192,7 +187,6 @@ public IActionResult PartiallyUpdateProduct(int id, [FromBody] JsonPatchDocument
 
     return app;
 }`} />
-                <br></br>
                 <p>Then, call this method in the Configure method:</p>
                 <CodeSnippet language="csharp" code={`public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
@@ -205,7 +199,6 @@ public IActionResult PartiallyUpdateProduct(int id, [FromBody] JsonPatchDocument
     app.UseRouting();
     app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
 }`} />
-                <br></br>
                 <p>
                     This middleware will catch all unhandled exceptions and return a 500 Internal Server Error
                     response, along with a basic error message.
@@ -254,7 +247,6 @@ public IActionResult PartiallyUpdateProduct(int id, [FromBody] JsonPatchDocument
         }
     }
 }`} />
-                <br></br>
                 <p>
                     In this example:
                 </p>

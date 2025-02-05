@@ -43,7 +43,7 @@ function ControlledInput() {
 }
 
 export default ControlledInput;`} />
-        <br></br>
+        <></>
         <p>In this example, the value of the input field is controlled by the <code>value</code> state, and any change in the input triggers the <code>handleChange</code> function to update the state.</p>
       </Section>
 
@@ -105,7 +105,7 @@ function RegistrationForm() {
 }
 
 export default RegistrationForm;`} />
-        <br></br>
+        <></>
         <p>In this example, we use a single state object <code>formData</code> to manage multiple form fields. The <code>handleChange</code> function dynamically updates the value of the field based on the <code>name</code> attribute of the input element.</p>
       </Section>
 
@@ -171,7 +171,7 @@ function LoginForm() {
 }
 
 export default LoginForm;`} />
-        <br></br>
+        <></>
         <p>In this example, we check if the email and password fields are empty before submitting the form. If either field is empty, an error message is displayed.</p>
       </Section>
 

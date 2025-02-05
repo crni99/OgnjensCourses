@@ -57,7 +57,7 @@ function Counter() {
 }
 
 export default Counter;`} />
-                <br></br>
+                <></>
                 <p>In this example, we initialize the state with <code>useState(0)</code>, where <code>count</code> is the current state value, and <code>setCount</code> is the function that updates the state.</p>
             </Section>
 
@@ -84,7 +84,7 @@ function FetchData() {
 }
 
 export default FetchData;`} />
-                <br></br>
+                <></>
                 <p>In this example, <code>useEffect</code> is used to fetch data from an API. The empty dependency array ensures that this effect runs only once, just like <code>componentDidMount</code> in class components.</p>
             </Section>
 

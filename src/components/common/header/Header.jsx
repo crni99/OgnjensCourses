@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import GroupItemNetApi from './GroupItemNetApi';
-import GroupItemReact from './GroupItemReact';
+import GroupItemBackend from './GroupItemBackend';
+import GroupItemFrontend from './GroupItemFrontend';
+import GroupItemDatabases from './GroupItemDatabase';
 
 export default function Header() {
 
@@ -51,8 +52,9 @@ export default function Header() {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
-                            <GroupItemNetApi />
-                            <GroupItemReact />
+                            <GroupItemBackend />
+                            <GroupItemFrontend />
+                            <GroupItemDatabases />
                         </ul>
                     </div>
                 </div>

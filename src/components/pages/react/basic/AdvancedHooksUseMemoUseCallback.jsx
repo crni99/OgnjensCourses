@@ -44,7 +44,6 @@ function ExpensiveCalculation() {
 }
 
 export default ExpensiveCalculation;`} />
-        <br />
         <p>In this example, the expensive calculation will only be re-executed when the `count` value changes. If `count` remains the same between renders, React will use the cached result from the previous render.</p>
         <p><strong>Real-World Use Case:</strong> Imagine a list of items where an expensive operation like sorting is triggered. Using `useMemo` will allow React to avoid re-sorting the list unless the underlying data has changed. This can significantly improve performance in large applications.</p>
         <p><strong>Performance Tip:</strong> If a value is derived from state or props and doesn’t change on every render, use `useMemo` to ensure expensive calculations like data transformations or computations are only recalculated when necessary.</p>

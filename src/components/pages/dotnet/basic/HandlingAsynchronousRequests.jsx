@@ -50,7 +50,6 @@ export default function HandlingAsynchronousRequests() {
     await Task.Delay(2000);  // Simulates a 2-second delay
     return "Data fetched successfully!";
 }`} />
-                <br></br>
                 <p>In this example:</p>
                 <ul>
                     <li>The method <code>GetDataAsync</code> is marked with <code>async</code>, and it returns a&nbsp;
@@ -110,7 +109,6 @@ namespace MyApiProject.Controllers
         }
     }
 }`} />
-                <br></br>
                 <p>In this example:</p>
                 <ul>
                     <li>The <code>GetProducts</code> and <code>GetProduct</code> methods are both asynchronous,
@@ -140,7 +138,6 @@ namespace MyApiProject.Controllers
                 </p>
                 <CodeSnippet language="csharp" code={`// Avoid this synchronous call in asynchronous methods
 var products = _context.Products.ToList();  // Blocks the thread`} />
-                <br></br>
                 <p>Instead, always use the asynchronous versions of methods, such as <code>ToListAsync()</code>,&nbsp;
                     <code>FindAsync()</code>, and <code>SaveChangesAsync()</code>, which allow the program to
                     continue executing other tasks while waiting for the database operation to complete.
@@ -164,7 +161,6 @@ var products = _context.Products.ToList();  // Blocks the thread`} />
         return await response.Content.ReadAsStringAsync();
     }
 }`} />
-                <br></br>
                 <p>Here, the <code>GetExternalDataAsync</code> method performs a non-blocking HTTP request to an
                     external API and asynchronously waits for the response.</p>
                 <h3>3.3 Using Task.WhenAll for Concurrent Operations</h3>
@@ -186,7 +182,6 @@ var products = _context.Products.ToList();  // Blocks the thread`} />
 
     return Ok(new { products, externalData });
 }`} />
-                <br></br>
                 <p>By using <code>Task.WhenAll</code>, both the database query and the external API call are
                     performed concurrently, which reduces overall waiting time.</p>
             </Section>
@@ -201,7 +196,6 @@ var products = _context.Products.ToList();  // Blocks the thread`} />
     // Incorrect: Blocking thread pool with a long-running CPU task
     await Task.Run(() => PerformHeavyComputation());
 }`} />
-                <br></br>
                 <p>In the above example, <code>Task.Run()</code> blocks a thread pool thread unnecessarily. Refactor
                     such tasks to run asynchronously when possible.</p>
             </Section>
@@ -223,7 +217,6 @@ var products = _context.Products.ToList();  // Blocks the thread`} />
         return StatusCode(408, "Request Timeout");  // Handle timeout gracefully
     }
 }`} />
-                <br></br>
                 <p>In this example, the <code>CancellationToken</code> is passed to the <code>ToListAsync</code>
                     &nbsp;method, allowing the operation to be canceled if it takes too long. If canceled, an appropriate
                     status code is returned.</p>

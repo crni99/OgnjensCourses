@@ -72,7 +72,7 @@ function EmailInput({ email, onEmailChange }) {
 }
 
 export default ParentComponent;`} />
-        <br></br>
+        <></>
         <p>In this example, the <code>ParentComponent</code> manages the shared state for the name and email fields. The child components <code>NameInput</code> and <code>EmailInput</code> each receive the appropriate data as props and can modify it by calling the <code>onNameChange</code> and <code>onEmailChange</code> functions passed from the parent.</p>
       </Section>
 
@@ -156,7 +156,7 @@ function AgeInput({ age, onAgeChange }) {
 }
 
 export default ParentComponent;`} />
-        <br></br>
+        <></>
         <p>In this example, the <code>ParentComponent</code> manages two pieces of state: the user’s name and age. The child components <code>NameInput</code> and <code>AgeInput</code> each receive the state data as props and update it via the callback functions passed from the parent.</p>
       </Section>
 

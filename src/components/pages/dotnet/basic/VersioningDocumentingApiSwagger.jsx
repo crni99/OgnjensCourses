@@ -21,13 +21,13 @@ export default function VersioningDocumentingApiSwagger() {
             <Section>
                 <h2>Why Versioning and Documenting Your API is Important</h2>
                 <ul>
-                    <li><strong>API Versioning:</strong> Over time, APIs evolve. Changes can break existing
+                    <li><strong>API Versioning:</strong> Over time, APIs evolve. Changes can eak existing
                         functionality, and to ensure that clients using older versions of your API continue to work
                         smoothly, versioning is necessary. Versioning allows you to make changes (e.g., adding new
-                        features or deprecating old ones) without breaking backward compatibility.</li>
+                        features or deprecating old ones) without eaking backward compatibility.</li>
                     <li><strong>API Documentation:</strong> Proper documentation helps consumers understand how to
                         interact with your API, what parameters to send, and what responses to expect. Interactive
-                        documentation also allows developers to test the API directly from the browser, reducing the
+                        documentation also allows developers to test the API directly from the owser, reducing the
                         learning curve and speeding up integration.</li>
                     <li><strong>Ensuring Consistency:</strong> With clear versioning and documentation, you provide
                         a clear contract for API consumers, making it easier to maintain consistency across multiple
@@ -54,7 +54,6 @@ export default function VersioningDocumentingApiSwagger() {
                 <h3>Implement API Versioning Using Microsoft.AspNetCore.Mvc.Versioning</h3>
                 <p>Install the Microsoft.AspNetCore.Mvc.Versioning package via NuGet:</p>
                 <CodeSnippet language="shell" code={`Install-Package Microsoft.AspNetCore.Mvc.Versioning`} />
-                <br></br>
 
                 <p>In your Startup.cs or Program.cs (depending on your .NET version), configure versioning.</p>
                 <CodeSnippet language="csharp" code={`public void ConfigureServices(IServiceCollection services)
@@ -85,8 +84,6 @@ public class ProductsV1Controller : ControllerBase
         return Ok(new { message = "This is version 1 of the Products API" });
     }
 }`} />
-                <br></br>
-
                 <p>For version 2, you can create another controller:</p>
                 <CodeSnippet language="csharp" code={`[ApiController]
 [Route("api/v{version:apiVersion}/products")]
@@ -98,7 +95,6 @@ public class ProductsV2Controller : ControllerBase
         return Ok(new { message = "This is version 2 of the Products API with new features" });
     }
 }`} />
-                <br></br>
                 <h4>Explanation:</h4>
                 <ul>
                     <li>The <code>v{`version:apiVersion`}</code> in the route specifies the version of the API.</li>
@@ -117,12 +113,11 @@ public class ProductsV2Controller : ControllerBase
             <Section>
                 <h2>Step 3: Documenting Your API with Swagger</h2>
                 <p>Swagger is a tool that automatically generates interactive API documentation. In .NET,
-                    Swashbuckle is the most common library used to integrate Swagger with your API.</p>
+                    Swashbuckle is the most common liary used to integrate Swagger with your API.</p>
 
                 <h3>Step 1: Install Swagger</h3>
                 <p>Install Swashbuckle.AspNetCore via NuGet:</p>
                 <CodeSnippet language="shell" code={`Install-Package Swashbuckle.AspNetCore`} />
-                <br></br>
 
                 <p>In Startup.cs or Program.cs, configure Swagger.</p>
                 <CodeSnippet language="csharp" code={`public void ConfigureServices(IServiceCollection services)

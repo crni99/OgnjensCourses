@@ -109,7 +109,6 @@ export default function ErrorResponseStatusCodes() {
         ]
     }
 }`} />
-                <br></br>
                 <p>This structure includes:</p>
                 <ul>
                     <li><strong>error.code:</strong> A machine-readable error code that can be used by clients to
@@ -166,7 +165,6 @@ export default function ErrorResponseStatusCodes() {
         return CreatedAtAction(nameof(GetProduct), new {id = product.Id}, product);
     }
 }`} />
-                <br></br>
                 <p>In this example:</p>
                 <ul>
                     <li>If the product parameter is null, a 400 Bad Request error is returned with a message
@@ -176,7 +174,6 @@ export default function ErrorResponseStatusCodes() {
                         provides validation details.
                     </li>
                 </ul>
-                <br></br>
                 <h3>Example 2: Handling Unauthorized Access (e.g., 401 Unauthorized)</h3>
                 <CodeSnippet language="csharp" code={`public class AuthenticationController : ControllerBase
 {
@@ -199,11 +196,9 @@ export default function ErrorResponseStatusCodes() {
         return Ok(new { message = "Login successful" });
     }
 }`} />
-                <br></br>
                 <p>Here, we use the 401 Unauthorized status code to indicate that the client provided invalid
                     credentials.
                 </p>
-                <br></br>
                 <h3>Example 3: Handling Not Found Errors (e.g., 404 Not Found)</h3>
                 <CodeSnippet language="csharp" code={`public class ProductsController : ControllerBase
 {
@@ -233,7 +228,6 @@ export default function ErrorResponseStatusCodes() {
         return Ok(product);
     }
 }`} />
-                <br></br>
                 <p>
                     In this case, a 404 Not Found error is returned when a product with the specified id is not
                     found in the system.

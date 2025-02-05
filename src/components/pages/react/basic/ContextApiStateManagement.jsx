@@ -48,7 +48,7 @@ function ThemeProvider({ children }) {
 }
 
 export { ThemeProvider, ThemeContext };`} />
-        <br />
+        
         <p>In this example, we define a <code>ThemeContext</code> and a <code>ThemeProvider</code> component. The provider wraps the child components and makes the current theme and the <code>toggleTheme</code> function accessible to them.</p>
       </Section>
 
@@ -70,7 +70,7 @@ function ThemedComponent() {
 }
 
 export default ThemedComponent;`} />
-        <br />
+        
         <p>The <code>ThemedComponent</code> uses the <code>useContext</code> hook to access the current theme and toggle function. It then applies the theme to the component’s styles and provides a button to toggle the theme.</p>
       </Section>
 
@@ -90,7 +90,7 @@ function App() {
 }
 
 export default App;`} />
-        <br />
+        
         <p>By wrapping <code>App</code> with <code>ThemeProvider</code>, any component inside <code>App</code> (like <code>ThemedComponent</code>) can access and modify the theme state.</p>
       </Section>
 

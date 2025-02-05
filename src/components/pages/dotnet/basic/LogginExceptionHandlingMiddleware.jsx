@@ -45,8 +45,6 @@ export default function LogginExceptionHandlingMiddleware() {
 
     services.AddControllers();
 }`} />
-                <br></br>
-
                 <p>Inject the Logger into Your Classes:</p>
                 <CodeSnippet language="csharp" code={`public class ProductsController : ControllerBase
 {
@@ -118,7 +116,6 @@ export default function LogginExceptionHandlingMiddleware() {
         }
     }
 }`} />
-                <br></br>
                 <p>Register the Middleware in the Pipeline:</p>
                 <p>Next, register the custom exception-handling middleware in the Configure method of Startup.cs.
                     The middleware should be added early in the pipeline to catch exceptions from other middleware.
@@ -155,7 +152,6 @@ public class ValidationException : Exception
 {
     public ValidationException(string message) : base(message) { }
 }`} />
-                <br></br>
 
                 <h3>Update Middleware to Handle Specific Exceptions</h3>
                 <p>Update the ExceptionHandlingMiddleware to handle custom exceptions differently.</p>
@@ -199,7 +195,6 @@ public class ValidationException : Exception
         }
     }
 }`} />
-                <br></br>
                 <p>This setup ensures that:</p>
                 <ul>
                     <li>If a <code>NotFoundException</code> is thrown, a 404 status code and a specific error
@@ -223,7 +218,6 @@ public class ValidationException : Exception
 dotnet add package Serilog.Extensions.Logging
 dotnet add package Serilog.Sinks.Console
 dotnet add package Serilog.Sinks.File`} />
-                <br></br>
 
                 <p>Configure Serilog in <code>Program.cs</code>:</p>
                 <CodeSnippet language="csharp" code={`public static IHostBuilder CreateHostBuilder(string[] args) =>

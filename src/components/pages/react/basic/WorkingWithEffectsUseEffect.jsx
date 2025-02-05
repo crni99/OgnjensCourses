@@ -38,7 +38,7 @@ function MyComponent() {
 }
 
 export default MyComponent;`} />
-        <br />
+        
         <p>In this case, <code>useEffect</code> is executed after every render. Since we have not provided a dependency array, the effect will run each time the component renders. This is useful for scenarios where you want to track or log each render.</p>
       </Section>
 
@@ -56,7 +56,7 @@ function MyComponent() {
 }
 
 export default MyComponent;`} />
-        <br />
+        
         <p>In this example, the <code>useEffect</code> hook only runs once when the component mounts. By passing an empty array, we ensure that the effect is not triggered on subsequent re-renders.</p>
       </Section>
 
@@ -90,7 +90,7 @@ function DataFetchingComponent() {
 }
 
 export default DataFetchingComponent;`} />
-        <br />
+        
         <p>This example demonstrates how to use <code>useEffect</code> to fetch data from an API when the component mounts. While the data is being fetched, a loading message is displayed. Once the data is retrieved, it's displayed in a formatted way. You should also handle any potential errors that may occur during data fetching.</p>
       </Section>
 
@@ -116,7 +116,7 @@ function TimerComponent() {
 }
 
 export default TimerComponent;`} />
-        <br />
+        
         <p>This example demonstrates setting up a timer that logs a message every second. The cleanup function is called when the component unmounts or before the effect runs again. This is essential to prevent memory leaks and ensure that unnecessary side effects don’t persist after the component is removed from the DOM.</p>
       </Section>
 
@@ -141,7 +141,7 @@ function Counter() {
 }
 
 export default Counter;`} />
-        <br />
+        
         <p>In this example, the effect only runs when the <code>count</code> state changes. This ensures that the effect isn’t executed on every render but only when the state is updated. Using dependencies like this helps improve performance by reducing unnecessary side effect executions.</p>
       </Section>
 

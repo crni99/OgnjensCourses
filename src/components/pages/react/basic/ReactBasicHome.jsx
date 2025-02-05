@@ -11,7 +11,7 @@ export default function ReactBasicHome() {
                 paragraph2="In this guide, we'll walk you through the core concepts and best practices that will make you proficient in React. From understanding JSX to managing state and handling side effects, you'll get hands-on experience building a scalable React application."
             />
 
-            <br></br>
+            <></>
 
             <HomeSection
                 title="Getting Started: Setting Up a React Project"
@@ -131,7 +131,7 @@ export default function ReactBasicHome() {
 
             <HomeSection
                 title="Testing React Components: Ensuring Quality with Unit Tests"
-                paragraph1="Learn how to write unit tests for your React components using testing libraries like Jest and React Testing Library."
+                paragraph1="Learn how to write unit tests for your React components using testing liaries like Jest and React Testing Liary."
                 paragraph2="Ensure the reliability of your React components through thorough testing."
                 targetURL={RoutePath.TESTING_REACT_COMPONENTS}
             />

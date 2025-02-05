@@ -47,7 +47,6 @@ export default function MonitoringApplicationHealthChecks() {
                 <p>Open your terminal or NuGet Package Manager and run the following command to install the package:
                 </p>
                 <CodeSnippet language="shell" code={`dotnet add package Microsoft.Extensions.Diagnostics.HealthChecks`} />
-                <br></br>
 
                 <h3>Step 2: Configure Health Checks in Startup.cs (or Program.cs for .NET 6+)</h3>
                 <p>Next, you’ll need to configure the health checks in your application's configuration pipeline. In
@@ -62,9 +61,8 @@ export default function MonitoringApplicationHealthChecks() {
 
     services.AddControllers();
 }`} />
-                <br></br>
                 <p>In this example, we add two simple health checks: one for a database and another for an external
-                    API.<br></br>You can replace these with more meaningful checks that test the actual health of your
+                    API.<></>You can replace these with more meaningful checks that test the actual health of your
                     dependencies.</p>
 
                 <h4>Expose Health Check Endpoint:</h4>
@@ -85,9 +83,8 @@ export default function MonitoringApplicationHealthChecks() {
         endpoints.MapControllers();
     });
 }`} />
-                <br></br>
                 <p>UseHealthChecks("/health"): This configures the application to expose a <code>/health</code>&nbsp;
-                    endpoint that users (or monitoring systems) can call to check the health of the app.<br></br>Now,
+                    endpoint that users (or monitoring systems) can call to check the health of the app.<></>Now,
                     when you navigate to <code>http://localhost:5000/health</code>, you will get a basic health
                     check status indicating that both the "Database" and "API" are healthy.</p>
             </Section>
@@ -95,7 +92,7 @@ export default function MonitoringApplicationHealthChecks() {
             <Section>
                 <h2>Step 2: Adding Advanced Health Checks</h2>
                 <p>The basic health check is useful for simple applications, but in production, you'll likely need
-                    to monitor various system components. .NET’s health checks library allows you to easily add
+                    to monitor various system components. .NET’s health checks liary allows you to easily add
                     checks for databases, caches, HTTP services, and more.</p>
 
                 <h3>Example 1: Database Health Check</h3>
@@ -103,8 +100,6 @@ export default function MonitoringApplicationHealthChecks() {
                     it and execute queries.</p>
                 <CodeSnippet language="csharp" code={`services.AddHealthChecks()
     .AddSqlServer(connectionString: "YourConnectionString", name: "Database");`} />
-                <br></br>
-
                 <p>This check will attempt to connect to the specified SQL Server database. If the connection fails,
                     the health check will return an unhealthy status.</p>
 
@@ -113,8 +108,6 @@ export default function MonitoringApplicationHealthChecks() {
                     its availability.</p>
                 <CodeSnippet language="csharp" code={`services.AddHealthChecks()
     .AddUrlGroup(new Uri("https://external-api.com/health"), name: "External API");`} />
-                <br></br>
-
                 <p>This check will make a GET request to the <code>/health</code> endpoint of the external service
                     and report the health based on the response.</p>
 
@@ -141,12 +134,9 @@ export default function MonitoringApplicationHealthChecks() {
         return true;
     }
 }`} />
-                <br></br>
-
                 <p>And register it in <code>ConfigureServices</code>:</p>
                 <CodeSnippet language="csharp" code={`services.AddHealthChecks()
     .AddCheck<CustomHealthCheck>("CustomHealthCheck");`} />
-                <br></br>
                 <p>This allows you to tailor the health check logic to your application's specific requirements.</p>
             </Section>
 
@@ -176,7 +166,6 @@ export default function MonitoringApplicationHealthChecks() {
         return httpContext.Response.WriteAsync(JsonConvert.SerializeObject(response));
     }
 }`} />
-                <br></br>
                 <h3>Configure the Response Writer in Configure:</h3>
                 <CodeSnippet language="csharp" code={`public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
@@ -193,7 +182,6 @@ export default function MonitoringApplicationHealthChecks() {
         endpoints.MapControllers();
     });
 }`} />
-                <br></br>
                 <p>This will return a detailed JSON response for the health check, providing information on the
                     status and duration of each individual check.</p>
             </Section>

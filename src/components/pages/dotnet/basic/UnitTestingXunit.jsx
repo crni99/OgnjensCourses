@@ -42,18 +42,15 @@ export default function UnitTestingXunit() {
                 <p>Create a Test Project: If you don’t already have a test project, create one using the following
                     command:</p>
                 <CodeSnippet language="shell" code={`dotnet new xunit -n MyApi.Tests`} />
-                <br></br>
 
                 <p>Add xUnit and Test Runner NuGet Packages: In your test project, install the necessary NuGet
                     packages for xUnit.</p>
                 <CodeSnippet language="shell" code={`dotnet add package xunit
 dotnet add package xunit.runner.visualstudio`} />
-                <br></br>
 
                 <p>Add Reference to Your Main Project: Your test project needs to reference your main project to be
                     able to access the code you’re testing.</p>
                 <CodeSnippet language="shell" code={`dotnet add reference ../MyApi/MyApi.csproj`} />
-                <br></br>
 
                 <h3>Create the Test Class</h3>
                 <p>Inside the MyApi.Tests project, create test classes that will hold your unit tests.</p>
@@ -72,7 +69,6 @@ dotnet add package xunit.runner.visualstudio`} />
         Assert.Equal("Product 1", result.Name);
     }
 }`} />
-                <br></br>
                 <h4>Explanation:</h4>
                 <ul>
                     <li><strong>Fact:</strong> This attribute indicates that the method is a test case. You can also
@@ -105,8 +101,6 @@ dotnet add package xunit.runner.visualstudio`} />
         return _productRepository.GetById(id);
     }
 }`} />
-                <br></br>
-
                 <h3>2. Avoid Static Methods and Global State</h3>
                 <p>Static methods and global state can make testing difficult because they introduce shared state
                     that can’t be isolated. Where possible, prefer instance methods with clearly defined inputs and
@@ -115,8 +109,6 @@ dotnet add package xunit.runner.visualstudio`} />
 {
     public string GetSetting() => "SomeSetting";
 }`} />
-                <br></br>
-
                 <h3>3. Separation of Concerns</h3>
                 <p>Ensure that your classes are single-purpose. A class that handles too many responsibilities
                     (e.g., interacting with a database, sending emails, processing business logic) is harder to
@@ -147,8 +139,6 @@ dotnet add package xunit.runner.visualstudio`} />
 {
     Product GetById(int id);
 }`} />
-                <br></br>
-
                 <h4>Create the ProductService Class</h4>
                 <CodeSnippet language="csharp" code={`public class ProductService
 {
@@ -164,10 +154,8 @@ dotnet add package xunit.runner.visualstudio`} />
         return _productRepository.GetById(id);
     }
 }`} />
-                <br></br>
-
                 <h4>Create a Unit Test with a Mock Repository</h4>
-                <p>Using a mocking library like Moq, you can set up your tests:</p>
+                <p>Using a mocking liary like Moq, you can set up your tests:</p>
                 <CodeSnippet language="csharp" code={`public class ProductServiceTests
 {
     [Fact]
@@ -185,7 +173,6 @@ dotnet add package xunit.runner.visualstudio`} />
         Assert.Equal("Product 1", result.Name);
     }
 }`} />
-                <br></br>
                 <h4>Explanation:</h4>
                 <ul>
                     <li><strong>Mocking:</strong> We use Moq to create a mock version of IProductRepository. This

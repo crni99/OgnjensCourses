@@ -11,7 +11,7 @@ export default function GettingStartedReact() {
             <Lead
                 title="Introduction to React: Getting Started with React Development"
                 paragraph1="Learn how to get started with React, from setting up your environment to building your first React component."
-                paragraph2="React is a JavaScript library for building user interfaces, developed by Facebook. It enables the creation of dynamic, interactive web applications with minimal effort. In this guide, we will walk you through the setup process, building your first React component, and understanding key React concepts."
+                paragraph2="React is a JavaScript liary for building user interfaces, developed by Facebook. It enables the creation of dynamic, interactive web applications with minimal effort. In this guide, we will walk you through the setup process, building your first React component, and understanding key React concepts."
             />
 
             <Section>
@@ -34,7 +34,7 @@ export default function GettingStartedReact() {
                     <li>Once installed, verify the installation by running the following command in your terminal:</li>
                 </ol>
                 <CodeSnippet language="shell" code={`node -v`} />
-                <br></br>
+                <></>
                 <p>This command should return the version of Node.js that you installed.</p>
             </Section>
 
@@ -47,7 +47,7 @@ export default function GettingStartedReact() {
                     <li>Run the following command to generate a new React application:</li>
                 </ol>
                 <CodeSnippet language="shell" code={`npx create-react-app my-react-app`} />
-                <br></br>
+                <></>
                 <p>This will create a new folder named `my-react-app` containing the React app boilerplate.</p>
                 <p>Navigate into your project directory:</p>
                 <CodeSnippet language="shell" code={`cd my-react-app`} />
@@ -62,7 +62,7 @@ export default function GettingStartedReact() {
                     <li>Alternatively, you can open the folder directly from the terminal:</li>
                 </ol>
                 <CodeSnippet language="shell" code={`code .`} />
-                <br></br>
+                <></>
                 <p>This will launch your code editor with the React project loaded.</p>
             </Section>
 
@@ -84,8 +84,8 @@ export default function GettingStartedReact() {
                     <li>In your terminal, run the following command to start the development server:</li>
                 </ul>
                 <CodeSnippet language="shell" code={`npm start`} />
-                <br></br>
-                <p>This command starts the server and opens your React application in the browser at <code>http://localhost:3000</code>.</p>
+                <></>
+                <p>This command starts the server and opens your React application in the owser at <code>http://localhost:3000</code>.</p>
             </Section>
 
             <Section>
@@ -103,8 +103,8 @@ function App() {
 }
 
 export default App;`} />
-                <br></br>
-                <p>Save the file, and the browser will automatically reload with the updated content.</p>
+                <></>
+                <p>Save the file, and the owser will automatically reload with the updated content.</p>
             </Section>
 
             <Section>
@@ -122,7 +122,7 @@ function MyComponent() {
 }
 
 export default MyComponent;`} />
-                <br></br>
+                <></>
                 <p>Now, import and render this new component inside the <code>src/App.js</code> file:</p>
                 <CodeSnippet language="jsx" code={`import React from 'react';
 import MyComponent from './MyComponent';
@@ -137,8 +137,8 @@ function App() {
 }
 
 export default App;`} />
-                <br></br>
-                <p>Save both files, and you should see your new component rendered in the browser.</p>
+                <></>
+                <p>Save both files, and you should see your new component rendered in the owser.</p>
             </Section>
 
             <Section>
@@ -146,14 +146,14 @@ export default App;`} />
                 <p>As you develop your React app, here are some tools and practices to help with debugging and optimizing your code:</p>
                 <ul>
                     <li><strong>Console Log:</strong> Use <code>console.log()</code> to inspect data and track state changes in React.</li>
-                    <li><strong>React DevTools:</strong> Install the React Developer Tools extension to inspect React components in your browser.</li>
-                    <li><strong>Code Splitting:</strong> Break your app into smaller, manageable components to improve performance.</li>
+                    <li><strong>React DevTools:</strong> Install the React Developer Tools extension to inspect React components in your owser.</li>
+                    <li><strong>Code Splitting:</strong> eak your app into smaller, manageable components to improve performance.</li>
                 </ul>
             </Section>
 
             <Section>
                 <h2>Conclusion</h2>
-                <p>In this guide, we’ve covered the essential steps to get started with React, from setting up your environment to creating your first components. React is a powerful library for building dynamic user interfaces, and as you continue your React journey, you’ll explore advanced topics like state management, hooks, routing, and much more.</p>
+                <p>In this guide, we’ve covered the essential steps to get started with React, from setting up your environment to creating your first components. React is a powerful liary for building dynamic user interfaces, and as you continue your React journey, you’ll explore advanced topics like state management, hooks, routing, and much more.</p>
             </Section>
 
             <PageNavigation prevPage={undefined} nextPage={RoutePath.UNDERSTANDING_JSX} />

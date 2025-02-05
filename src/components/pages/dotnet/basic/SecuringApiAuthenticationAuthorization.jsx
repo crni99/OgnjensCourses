@@ -14,7 +14,7 @@ export default function SecuringApiAuthenticationAuthorization() {
                 paragraph1="Learn how to implement authentication and authorization to secure your .NET
                     Web API, ensuring only authorized users can access sensitive resources."
                 paragraph2="When building RESTful APIs, security is paramount. Without proper authentication and authorization,
-                    your API could be exposed to malicious actors, leading to data breaches, unauthorized access, and
+                    your API could be exposed to malicious actors, leading to data eaches, unauthorized access, and
                     other security vulnerabilities. Implementing robust authentication and authorization mechanisms
                     ensures that only authorized users can access specific resources and actions in your API."
             />
@@ -44,7 +44,6 @@ export default function SecuringApiAuthenticationAuthorization() {
                     <li>Microsoft.AspNetCore.Authentication.JwtBearer</li>
                     <li>System.IdentityModel.Tokens.Jwt</li>
                 </ul>
-                <br></br>
                 <h4>2. Configure JWT in Startup.cs</h4>
                 <CodeSnippet language="csharp" code={`public void ConfigureServices(IServiceCollection services)
 {
@@ -65,8 +64,6 @@ export default function SecuringApiAuthenticationAuthorization() {
 
     services.AddControllers();
 }`} />
-                <br></br>
-                <br></br>
                 <h4>3. Generating JWT Tokens</h4>
                 <p>When a user logs in with valid credentials, you’ll issue a JWT token for authentication. Here’s
                     an example of generating a JWT token:</p>
@@ -106,7 +103,6 @@ export default function SecuringApiAuthenticationAuthorization() {
         return Unauthorized();
     }
 }`} />
-                <br></br>
                 <p>Explanation:</p>
                 <ul>
                     <li>The login endpoint issues a JWT token after validating the user's credentials.</li>
@@ -142,7 +138,6 @@ public class ProductsController : ControllerBase
         return Ok(products);
     }
 }`} />
-                <br></br>
                 <p>The <code>[Authorize]</code> attribute ensures that only users with the "Admin" role can access
                     the <code>GetProducts</code> endpoint. If a user who is not in the "Admin" role tries to access
                     it, they will receive a 403 Forbidden response.</p>
@@ -160,7 +155,6 @@ public class ProductsController : ControllerBase
 
     services.AddControllers();
 }`} />
-                <br></br>
                 <p>Apply the policy to a controller action:</p>
                 <CodeSnippet language="csharp" code={`[Authorize(Policy = "AdminOnly")]
 [HttpGet]
@@ -193,7 +187,6 @@ public IActionResult GetAdminData()
                     requiring authentication, you will need to include the JWT token in the Authorization header,
                     typically like this:</p>
                 <CodeSnippet language="csharp" code={`Authorization: Bearer {YourJWTTokenHere}`} />
-                <br></br>
                 <p>For endpoints with authorization, the API will verify the token, extract the user’s roles or
                     claims, and check if they have permission to access the requested resource.</p>
             </Section>

@@ -81,7 +81,7 @@ class ErrorBoundary extends Component {
 }
 
 export default ErrorBoundary;`} />
-        <br />
+        
         <p>
           In this example, the <code>ErrorBoundary</code> component has a state variable called <code>hasError</code> to track whether an error has occurred. When an error occurs in any child component, the fallback UI is rendered, and the error is logged to the console.
         </p>
@@ -112,7 +112,7 @@ function App() {
 }
 
 export default App;`} />
-        <br />
+        
         <p>
           In this example, the <code>ProblematicComponent</code> intentionally throws an error. However, because it is wrapped inside the <code>ErrorBoundary</code> component, the error is caught, and the fallback UI is shown instead of crashing the app.
         </p>
@@ -148,7 +148,7 @@ function EventHandlerWithError() {
 }
 
 export default EventHandlerWithError;`} />
-        <br />
+        
         <p>
           In this example, when the count reaches 2, an error is manually thrown inside the event handler. The <code>try-catch</code> block catches the error, preventing the entire app from crashing.
         </p>

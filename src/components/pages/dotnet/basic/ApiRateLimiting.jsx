@@ -23,7 +23,7 @@ export default function ApiRateLimiting() {
                 <h2>Why Rate Limiting is Important</h2>
                 <ul>
                     <li>Preventing Abuse: Limiting the number of requests a user or service can make in a given time
-                        period helps prevent abuse, such as DoS (Denial of Service) or brute-force attacks.</li>
+                        period helps prevent abuse, such as DoS (Denial of Service) or ute-force attacks.</li>
                     <li>Ensuring Fair Usage: It ensures that one user cannot monopolize API resources and that all
                         users have fair access to the system.</li>
                     <li>Protecting Backend Services: Rate limiting helps prevent server overload, ensuring that
@@ -61,7 +61,7 @@ export default function ApiRateLimiting() {
             <Section>
                 <h2>Step 2: Implementing Rate Limiting in .NET</h2>
                 <p>In .NET, rate limiting can be implemented using middleware that intercepts requests and applies
-                    the rate limiting policy. You can use libraries like AspNetCoreRateLimit to simplify this
+                    the rate limiting policy. You can use liaries like AspNetCoreRateLimit to simplify this
                     process, but let’s go over how to implement basic rate limiting manually.</p>
 
                 <h3>Example: Implementing Fixed Window Rate Limiting</h3>
@@ -139,7 +139,6 @@ export default function ApiRateLimiting() {
         public int RequestCount { get; set; }
     }
 }`} />
-                <br></br>
                 <p>Explanation:</p>
                 <ul>
                     <li>Dictionary for Request Counts: We use a Dictionary&lt;string, RequestData&gt; to store the
@@ -158,7 +157,7 @@ export default function ApiRateLimiting() {
                         for the IP address is reset.
                     </li>
                 </ul>
-                <br></br>
+                <></>
                 <h4>Step 2: Register the Middleware in Startup</h4>
                 <CodeSnippet language="csharp" code={`public class Startup
 {

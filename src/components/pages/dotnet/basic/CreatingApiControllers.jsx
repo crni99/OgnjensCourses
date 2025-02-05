@@ -62,7 +62,6 @@ namespace MyApiProject.Controllers
         }
     }
 }`} />
-                <br></br>
                 <p>In this example:</p>
                 <ul>
                     <li><strong>[Route("api/[controller]")]:</strong> Defines the base route for the controller. The
@@ -109,7 +108,6 @@ public ActionResult<string> GetProduct(int id)
     }
     return Ok(Products[id]); // Return 200 OK with the product at index id
 }`} />
-                <br></br>
                 <p>The GET method is used to retrieve resources. You can return a list of resources or a single
                     resource.</p>
                 <p><code>Ok()</code> returns a 200 OK status with the data, while <code>NotFound()</code> returns a
@@ -123,7 +121,6 @@ public ActionResult<string> CreateProduct([FromBody] string product)
     Products.Add(product);
     return CreatedAtAction(nameof(GetProduct), new {id = Products.Count - 1}, product);
 }`} />
-            <br></br>
             <p>The POST method is used to create a new resource on the server.</p>
             <p><code>CreatedAtAction()</code> returns a 201 Created status and includes the URL to the newly
                 created resource.</p>
@@ -144,7 +141,6 @@ public IActionResult UpdateProduct(int id, [FromBody] string product)
     Products[id] = product;
     return NoContent(); // Return 204 No Content indicating the update was successful
 }`} />
-                <br></br>
                 <p>
                     The PUT method is used for updating an existing resource. This method replaces the entire
                     resource.
@@ -166,7 +162,6 @@ public IActionResult PartiallyUpdateProduct(int id, [FromBody] string product)
     Products[id] = product; // Assuming only one field (name) is updated
     return NoContent();
 }`} />
-                <br></br>
                 <p>The PATCH method is used for partial updates. You only update specific fields rather than
                     replacing the entire resource.
                 </p>
@@ -187,7 +182,6 @@ public IActionResult DeleteProduct(int id)
     Products.RemoveAt(id);
     return NoContent(); // Return 204 to indicate the product was deleted
 }`} />
-                <br></br>
                 <p>The DELETE method is used to remove a resource from the server.
                 </p>
                 <p><code>RemoveAt(id)</code> removes the product from the list at the specified index, and&nbsp;

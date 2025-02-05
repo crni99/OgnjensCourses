@@ -48,7 +48,6 @@ export default function AdvancedApiSecurityOauthJwtHttps() {
                 <h3>Example: Setting Up IdentityServer4 for OAuth 2.0</h3>
                 <p>Install IdentityServer4: First, install the necessary NuGet packages.</p>
                 <CodeSnippet language="shell" code={`dotnet add package IdentityServer4`} />
-                <br></br>
 
                 <p>Configure IdentityServer in <code>Startup.cs</code>:</p>
                 <CodeSnippet language="csharp" code={`public void ConfigureServices(IServiceCollection services)
@@ -76,7 +75,6 @@ public void Configure(IApplicationBuilder app)
         endpoints.MapControllers();
     });
 }`} />
-                <br></br>
 
                 <h3>Define Configurations</h3>
                 <p>Create a <code>Config.cs</code> class to define the API scopes, clients, and resources:</p>
@@ -111,7 +109,6 @@ public void Configure(IApplicationBuilder app)
         }
     };
 }`} />
-                <br></br>
 
                 <h3>Access Token Generation</h3>
                 <p>OAuth 2.0 will issue access tokens for clients to use when calling your API. The client will use
@@ -126,7 +123,6 @@ public void Configure(IApplicationBuilder app)
                 <h3>Example: Setting Up JWT Authentication in Your API</h3>
                 <p>Install JWT Authentication NuGet Package:</p>
                 <CodeSnippet language="shell" code={`dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer`} />
-                <br></br>
 
                 <p>Configure JWT Authentication in <code>Startup.cs</code>:</p>
                 <CodeSnippet language="csharp" code={`public void ConfigureServices(IServiceCollection services)
@@ -140,8 +136,7 @@ public void Configure(IApplicationBuilder app)
 
     services.AddControllers();
 }`} />
-                <br></br>
-                <br></br>
+
                 <h3>Secure Your API with JWT Authentication</h3>
                 <p>In your controllers, apply the <code>[Authorize]</code> attribute to secure endpoints that
                     require authentication:</p>
@@ -163,7 +158,6 @@ public class ProductsController : ControllerBase
         return Ok(await _context.Products.ToListAsync());
     }
 }`} />
-                <br></br>
 
                 <p>With this setup, your API will validate incoming JWT tokens and ensure that only authenticated
                     users can access protected endpoints.</p>
@@ -199,7 +193,6 @@ public class ProductsController : ControllerBase
         endpoints.MapControllers();
     });
 }`} />
-                <br></br>
 
                 <h3>Configure Kestrel to Use HTTPS</h3>
                 <p>In your <code>appsettings.json</code>, configure Kestrel to use HTTPS:</p>

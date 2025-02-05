@@ -38,7 +38,7 @@ function Counter() {
 }
 
 export default Counter;`} />
-        <br></br>
+        <></>
         <p>In this example, the <code>useState(0)</code> hook initializes a state variable called <code>count</code> with an initial value of <code>0</code>. The <code>setCount</code> function is used to update the value of <code>count</code>, and each time the button is clicked, the component re-renders with the updated state.</p>
         <p><strong>Note:</strong> React guarantees that the component will re-render every time the state changes. This ensures that the UI is always in sync with the state of the component.</p>
       </Section>
@@ -87,7 +87,7 @@ function DataFetcher() {
 }
 
 export default DataFetcher;`} />
-        <br></br>
+        <></>
         <p>In this example, the <code>useEffect</code> hook runs after the component mounts (because of the empty dependency array <code>[]</code>). It fetches data from an API and updates the component’s state with the response. This is ideal for fetching data from an external source or making side effects only when the component is mounted.</p>
         <p>If you want to run the effect when specific values change, you can pass those values in the dependency array. For example, if you wanted to fetch data when the value of a specific state variable changes, you would pass that variable in the array. This ensures that the side effect runs only when necessary.</p>
         <p><strong>Example:</strong> If you're listening for changes to a form input, you can pass the form value as a dependency to the <code>useEffect</code> hook, triggering the effect whenever the form value changes.</p>
@@ -117,7 +117,7 @@ function Timer() {
 }
 
 export default Timer;`} />
-        <br></br>
+        <></>
         <p>In this example, the <code>Timer</code> component keeps track of the time in the state and updates it every second using <code>setInterval</code>. The <code>useEffect</code> hook sets up the timer when the component mounts and ensures it gets cleaned up when the component unmounts to prevent memory leaks.</p>
         <p><strong>Why Cleanup?</strong> The cleanup function is important for preventing memory leaks and side effects when the component is removed from the DOM, such as when switching between different pages or components.</p>
       </Section>

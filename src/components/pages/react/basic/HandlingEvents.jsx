@@ -45,7 +45,7 @@ function ClickCounter() {
 }
 
 export default ClickCounter;`} />
-        <br></br>
+        <></>
         <p>In this example, the <code>handleClick</code> function is triggered when the user clicks the button. The function updates the <code>count</code> state, which re-renders the component with the updated value.</p>
       </Section>
 
@@ -80,7 +80,7 @@ function GreetUser() {
 }
 
 export default GreetUser;`} />
-        <br></br>
+        <></>
         <p>In this example, the <code>handleChange</code> function updates the <code>name</code> state when the input value changes. The <code>handleSubmit</code> function is triggered when the form is submitted, and it alerts a greeting message with the entered name.</p>
       </Section>
 
@@ -115,8 +115,8 @@ function FormExample() {
 }
 
 export default FormExample;`} />
-        <br></br>
-        <p>In this form example, the <code>handleEmailChange</code> function updates the email state, and the <code>handleSubmit</code> function handles the form submission by preventing the default browser behavior and displaying an alert.</p>
+        <></>
+        <p>In this form example, the <code>handleEmailChange</code> function updates the email state, and the <code>handleSubmit</code> function handles the form submission by preventing the default owser behavior and displaying an alert.</p>
       </Section>
 
       <Section>
@@ -148,7 +148,7 @@ function PersistEventExample() {
 }
 
 export default PersistEventExample;`} />
-        <br></br>
+        <></>
         <p>In this example, the <code>event.persist()</code> method ensures that the event object remains available for the asynchronous operation inside the <code>setTimeout</code> function.</p>
       </Section>
 
@@ -180,7 +180,7 @@ class EventBindingExample extends Component {
 }
 
 export default EventBindingExample;`} />
-        <br></br>
+        <></>
         <p>In this example, the <code>handleClick</code> method is bound to the component instance in the constructor, ensuring that it has access to the correct <code>this</code> context when the button is clicked.</p>
       </Section>
 

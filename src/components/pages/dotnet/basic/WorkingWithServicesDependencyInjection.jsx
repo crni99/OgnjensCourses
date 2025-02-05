@@ -59,7 +59,6 @@ export default function WorkingWithServicesDependencyInjection() {
         void DeleteProduct(int id);
     }
 }`} />
-                <br></br>
                 <p>
                     In this example:
                 </p>
@@ -125,7 +124,6 @@ export default function WorkingWithServicesDependencyInjection() {
         }
     }
 }`} />
-                <br></br>
                 <p>
                     In this example:
                 </p>
@@ -165,7 +163,6 @@ export default function WorkingWithServicesDependencyInjection() {
         app.Run();
     }
 }`} />
-                <br></br>
                 <p>
                     In this example:
                 </p>
@@ -237,7 +234,6 @@ export default function WorkingWithServicesDependencyInjection() {
         }
     }
 }`} />
-                <br></br>
                 <p>
                     In this controller:
                 </p>
@@ -276,7 +272,6 @@ export default function WorkingWithServicesDependencyInjection() {
         Assert.Equal("Laptop", result.Name);
     }
 }`} />
-                <br></br>
                 <p>
                     In these tests:
                 </p>

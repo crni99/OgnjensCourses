@@ -55,7 +55,7 @@ export default function ImprovingPerformancesCaching() {
                     multiple servers.</p>
 
                 <h3>Installing the Caching Package</h3>
-                <p>To use in-memory caching in .NET, you don’t need any external libraries; it’s part of the&nbsp;
+                <p>To use in-memory caching in .NET, you don’t need any external liaries; it’s part of the&nbsp;
                     <code>Microsoft.Extensions.Caching.Memory</code> package, which is included by default in most
                     .NET templates.
                 </p>
@@ -67,8 +67,6 @@ export default function ImprovingPerformancesCaching() {
 
     services.AddControllers();
 }`} />
-                <br></br>
-
                 <h3>Step 2: Using In-Memory Cache in Controllers</h3>
                 <p>Now, let’s use the in-memory cache in an API controller. Suppose we want to cache a list of
                     products for a short period.</p>
@@ -102,7 +100,6 @@ public class ProductsController : ControllerBase
         return Ok(products);
     }
 }`} />
-                <br></br>
                 <h4>Explanation:</h4>
                 <ul>
                     <li>We first try to retrieve the list of products from the cache using&nbsp;
@@ -128,8 +125,6 @@ public class ProductsController : ControllerBase
                     <code>Microsoft.Extensions.Caching.StackExchangeRedis</code> NuGet package.
                 </p>
                 <CodeSnippet language="shell" code={`dotnet add package Microsoft.Extensions.Caching.StackExchangeRedis`} />
-                <br></br>
-
                 <h3>Step 2: Configure Redis in Startup.cs or Program.cs</h3>
                 <CodeSnippet language="csharp" code={`public void ConfigureServices(IServiceCollection services)
 {
@@ -141,8 +136,6 @@ public class ProductsController : ControllerBase
 
     services.AddControllers();
 }`} />
-                <br></br>
-
                 <h3>Step 3: Using Redis Cache in Controllers</h3>
                 <p>Once Redis is set up, you can use it in the same way as in-memory caching. Let’s update the&nbsp;
                     <code>ProductsController</code> to use Redis for caching:
@@ -182,7 +175,6 @@ public class ProductsController : ControllerBase
         return Ok(cachedProductList);
     }
 }`} />
-                <br></br>
                 <h4>Explanation:</h4>
                 <ul>
                     <li>We use <code>IDistributedCache</code> to interact with Redis.</li>
@@ -205,16 +197,12 @@ public class ProductsController : ControllerBase
                 <p>For output caching in .NET, you can use the <code>Microsoft.AspNetCore.ResponseCaching</code>
                     package.</p>
                 <CodeSnippet language="shell" code={`dotnet add package Microsoft.AspNetCore.ResponseCaching`} />
-                <br></br>
-
                 <h3>Step 2: Configure Response Caching</h3>
                 <CodeSnippet language="csharp" code={`public void ConfigureServices(IServiceCollection services)
 {
     services.AddResponseCaching(); // Add Response Caching Service
     services.AddControllers();
 }`} />
-                <br></br>
-
                 <h3>Step 3: Apply Output Caching to API Endpoints</h3>
                 <p>You can now apply output caching to specific API endpoints by using the&nbsp;
                     <code>[ResponseCache]</code> attribute.
@@ -226,7 +214,6 @@ public async Task<ActionResult<IEnumerable<Product>>> GetCachedProducts()
     var products = await _context.Products.ToListAsync();
     return Ok(products);
 }`} />
-                <br></br>
                 <h4>Explanation:</h4>
                 <ul>
                     <li><code>[ResponseCache(Duration = 60)]</code>: This attribute tells the API to cache the

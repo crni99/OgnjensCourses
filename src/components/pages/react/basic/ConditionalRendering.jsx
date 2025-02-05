@@ -34,7 +34,7 @@ function WelcomeMessage() {
 }
 
 export default WelcomeMessage;`} />
-        <br></br>
+        <></>
         <p><strong>Best Practice:</strong> Avoid using <code>if-else</code> directly inside JSX because it can make the code harder to read.</p>
       </Section>
 
@@ -54,7 +54,7 @@ function WelcomeMessage() {
 }
 
 export default WelcomeMessage;`} />
-        <br></br>
+        <></>
         <p><strong>Best Practice:</strong> Use the ternary operator for simple conditions, but avoid nesting multiple ternary expressions as they reduce readability.</p>
       </Section>
 
@@ -77,7 +77,7 @@ function Notifications() {
 }
 
 export default Notifications;`} />
-        <br></br>
+        <></>
         <p><strong>Important:</strong> If <code>hasNewNotifications</code> is <code>false</code>, React renders **nothing** instead of <code>false</code>.</p>
       </Section>
 
@@ -87,7 +87,7 @@ export default Notifications;`} />
         <CodeSnippet language="jsx" code={`function UserGreeting({ name }) {
   return <h1>Hello, {name || "Guest"}!</h1>;
 }`} />
-        <br></br>
+        <></>
         <p>Here, if <code>name</code> is **falsy** (e.g., `null`, `undefined`, `""`), it defaults to `"Guest"`.</p>
       </Section>
 
@@ -121,7 +121,7 @@ function StatusMessage() {
 }
 
 export default StatusMessage;`} />
-        <br></br>
+        <></>
         <p><strong>When to Use:</strong> Use the switch statement when dealing with multiple discrete cases.</p>
       </Section>
 
@@ -148,13 +148,13 @@ function App() {
 }
 
 export default App;`} />
-        <br></br>
+        <></>
         <p><strong>Why?</strong> Lazy loading improves initial page load time by **deferring the loading of components** until they are needed.</p>
       </Section>
 
       <Section>
         <h2>Conditional Rendering in JSX</h2>
-        <p>Conditional rendering is a key part of JSX. Any valid JavaScript expression must be placed inside curly braces <code>{ }</code> for React to evaluate it.</p>
+        <p>Conditional rendering is a key part of JSX. Any valid JavaScript expression must be placed inside curly aces <code>{ }</code> for React to evaluate it.</p>
         <CodeSnippet language="jsx" code={`function App() {
   const isLoggedIn = true;
 
@@ -164,7 +164,7 @@ export default App;`} />
     </div>
   );
 }`} />
-        <br></br>
+        <></>
         <p>Here, the message is displayed dynamically based on the <code>isLoggedIn</code> state.</p>
       </Section>
 

@@ -65,7 +65,6 @@ export default function ScalingOptimizingApi() {
     
     return Ok(products);
 }`} />
-                <br></br>
                 <h3>b. Database Connection Pooling</h3>
                 <p>Ensure that your database connections are pooled to avoid the overhead of repeatedly opening and
                     closing connections.</p>
@@ -85,7 +84,7 @@ export default function ScalingOptimizingApi() {
                 </ul>
 
                 <h3>b. Microservices Architecture</h3>
-                <p>Consider breaking your API down into smaller, independently scalable services.</p>
+                <p>Consider eaking your API down into smaller, independently scalable services.</p>
 
                 <h3>c. API Gateways</h3>
                 <p>API gateways can help manage requests between clients and microservices.</p>
@@ -112,7 +111,6 @@ public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
 
     return Ok(JsonConvert.DeserializeObject<List<Product>>(products));
 }`} />
-                <br></br>
                 <h3>Best Practices for Caching:</h3>
                 <ul>
                     <li>Cache only frequently accessed, rarely changing data.</li>
@@ -138,7 +136,6 @@ public async Task<IActionResult> ProcessOrder(Order order)
                 <h2>5. Throttling and Rate Limiting</h2>
                 <p>Implementing throttling and rate limiting helps protect your API from abuse.</p>
                 <CodeSnippet language="shell" code={`dotnet add package AspNetCoreRateLimit`} />
-                <br></br>
                 <CodeSnippet language="json" code={`{
   "IpRateLimiting": {
     "EnableEndpointRateLimiting": true,

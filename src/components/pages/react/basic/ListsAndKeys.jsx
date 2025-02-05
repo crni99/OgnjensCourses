@@ -32,7 +32,7 @@ function ShoppingList() {
 }
 
 export default ShoppingList;`} />
-        <br></br>
+        <></>
         <p>In this example, we use the <code>map()</code> function to iterate through an array of items and render a list item (<code>&lt;li&gt;</code>) for each element in the array.</p>
       </Section>
 
@@ -61,7 +61,7 @@ function ShoppingList() {
 }
 
 export default ShoppingList;`} />
-        <br></br>
+        <></>
         <p>In this example, each item has a unique <code>id</code>, which we use as the <code>key</code> for each list item. This ensures that React can efficiently update the DOM when the list changes.</p>
       </Section>
 
@@ -101,7 +101,7 @@ function ProductList() {
 }
 
 export default ProductList;`} />
-        <br></br>
+        <></>
         <p>In this example, the products are fetched from an API using the <code>fetch()</code> function and stored in the <code>products</code> state. We then map over the data and render each product in a list, using the <code>id</code> as the key for each list item.</p>
       </Section>
 
@@ -133,7 +133,7 @@ function ReorderList() {
 }
 
 export default ReorderList;`} />
-        <br></br>
+        <></>
         <p>In this example, when the "Reorder List" button is clicked, the list of items is reversed. Thanks to the unique keys, React can efficiently update the order of the items without unnecessary re-renders.</p>
       </Section>
 

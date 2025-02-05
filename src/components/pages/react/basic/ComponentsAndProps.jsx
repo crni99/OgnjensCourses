@@ -10,7 +10,7 @@ export default function ComponentsAndProps() {
       <Lead
         title="Components and Props"
         paragraph1="Learn how to create reusable components in React and pass data to them using props. Components are the building blocks of a React application, and props allow data to flow from parent to child components."
-        paragraph2="Components are the core of React. They allow you to break down the UI into independent, reusable pieces. Props are used to pass data to these components, enabling dynamic rendering and interaction."
+        paragraph2="Components are the core of React. They allow you to eak down the UI into independent, reusable pieces. Props are used to pass data to these components, enabling dynamic rendering and interaction."
       />
 
       <Section>
@@ -39,7 +39,7 @@ function Welcome(props) {
 }
 
 export default Welcome;`} />
-        <br />
+        
         <p>In this example, <code>Welcome</code> accepts a prop called <code>name</code>, which is displayed inside the <code>h1</code> tag.</p>
       </Section>
 
@@ -53,7 +53,7 @@ function Welcome({ name }) {
 }
 
 export default Welcome;`} />
-        <br />
+        
         <p>This makes the code cleaner and more readable.</p>
       </Section>
 
@@ -72,7 +72,7 @@ function UserInfo({ name, age }) {
 }
 
 export default UserInfo;`} />
-        <br />
+        
         <p>And use it in a parent component:</p>
         <CodeSnippet language="jsx" code={`import UserInfo from './UserInfo';
 
@@ -98,7 +98,7 @@ function Card({ children }) {
 }
 
 export default Card;`} />
-        <br />
+        
         <p>Usage example:</p>
         <CodeSnippet language="jsx" code={`import Card from './Card';
 
@@ -112,7 +112,7 @@ function App() {
 }
 
 export default App;`} />
-        <br />
+        
         <p>In this example, <code>children</code> represents the content inside <code>Card</code>.</p>
       </Section>
 
@@ -126,7 +126,7 @@ function Welcome({ name = 'Guest' }) {
 }
 
 export default Welcome;`} />
-        <br />
+        
         <p>This approach is an alternative to using <code>defaultProps</code>.</p>
       </Section>
 
@@ -138,7 +138,7 @@ export default Welcome;`} />
 
       <Section>
         <h2>Prop Types</h2>
-        <p>React provides a way to validate the type of props using the <code>prop-types</code> library.</p>
+        <p>React provides a way to validate the type of props using the <code>prop-types</code> liary.</p>
         <CodeSnippet language="jsx" code={`import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -151,7 +151,7 @@ Welcome.propTypes = {
 };
 
 export default Welcome;`} />
-        <br />
+        
         <p>In this example, <code>name</code> is required and must be a string.</p>
       </Section>
 

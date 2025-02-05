@@ -40,8 +40,6 @@ export default function GettingStartedDotNetApi() {
                         in your terminal:</li>
                 </ol>
                 <CodeSnippet language="shell" code={`dotnet --version`} />
-
-                <br></br>
                 <p>This should return the version of .NET that you installed.</p>
             </Section>
 
@@ -55,7 +53,6 @@ export default function GettingStartedDotNetApi() {
                     <li>Run the following command to create a new Web API project:</li>
                 </ol>
                 <CodeSnippet language="shell" code={`dotnet new webapi -n MyApiProject`} />
-                <br></br>
                 <p>This will generate a new folder named MyApiProject with the basic structure of a Web API.
                     Navigate to your project directory:</p>
                 <CodeSnippet language="shell" code={`cd MyApiProject`} />
@@ -71,7 +68,6 @@ export default function GettingStartedDotNetApi() {
                     <li>Alternatively, you can open the project from the terminal using:</li>
                 </ol>
                 <CodeSnippet language="shell" code={`start MyApiProject.sln`} />
-                <br></br>
                 <p>This will launch Visual Studio and load your Web API project.</p>
             </Section>
 
@@ -103,7 +99,7 @@ export default function GettingStartedDotNetApi() {
                         <code>https://localhost:5001</code> for HTTPS).
                     </li>
                 </ul>
-                <p>Open your browser and navigate to <code>https://localhost:5001/weatherforecast</code> to see the
+                <p>Open your owser and navigate to <code>https://localhost:5001/weatherforecast</code> to see the
                     default API in action. You should see a JSON response with mock weather data.</p>
             </Section>
 
@@ -150,7 +146,6 @@ namespace MyApiProject.Controllers
         }
     }
 }`} />
-                <br></br>
                 <p>Here’s what the code does:</p>
                 <ul>
                     <li>The ProductsController class inherits from ControllerBase, which provides necessary methods
@@ -163,7 +158,7 @@ namespace MyApiProject.Controllers
             <Section>
                 <h2>Step 7: Test the API Endpoints</h2>
                 <p>After adding the new controller, run the application again (press F5).</p>
-                <p>Open your browser or a tool like Postman.</p>
+                <p>Open your owser or a tool like Postman.</p>
                 <ul>
                     <li>To retrieve the list of products, make a GET request to&nbsp;
                         <code>https://localhost:5001/api/products</code>.
@@ -180,7 +175,7 @@ namespace MyApiProject.Controllers
                 <p>As you develop your API, debugging is an essential step. Visual Studio provides excellent
                     debugging tools:</p>
                 <ul>
-                    <li><strong>Breakpoints:</strong> Click on the left margin next to the line of code where you
+                    <li><strong>eakpoints:</strong> Click on the left margin next to the line of code where you
                         want to pause execution.</li>
                     <li><strong>Watch Variables:</strong> View and inspect variables while debugging.</li>
                     <li><strong>Call Stack:</strong> Inspect the call stack to see the execution flow.</li>

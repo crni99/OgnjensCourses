@@ -21,6 +21,10 @@ h2 {
     padding-bottom: 5px;
 }
 
+h3 {
+    margin-top: 30px; 
+}
+
 p,
 ul,
 ol {
@@ -56,6 +60,10 @@ ol {
     background-color: transparent;
     border: none;
     color: #f8f8f2;
+}
+
+.toolbar {
+    margin-bottom: 20px;
 }
 
 .token.keyword {

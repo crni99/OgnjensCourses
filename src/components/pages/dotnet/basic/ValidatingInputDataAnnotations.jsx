@@ -65,7 +65,6 @@ namespace MyApiProject.Models
         public string ManufacturerEmail { get; set; }
     }
 }`} />
-                <br></br>
                 <p>In this example:</p>
                 <ul>
                     <li><strong>[Required]:</strong> Ensures the Name field is not empty with a custom error
@@ -99,7 +98,6 @@ namespace MyApiProject.Controllers
         }
     }
 }`} />
-                <br></br>
                 <p>
                     In this controller:
                 </p>
@@ -145,7 +143,6 @@ namespace MyApiProject.Validation
         }
     }
 }`} />
-                <br></br>
                 <p>In this example:</p>
                 <ul>
                     <li>The <code>PriceMultipleOfHalfAttribute</code> class inherits from&nbsp;
@@ -178,7 +175,6 @@ namespace MyApiProject.Validation
         public string ManufacturerEmail { get; set; }
     }
 }`} />
-                <br></br>
                 <p>Here, the <code>Price</code> property is validated with both the built-in <code>[Range]</code>
                     &nbsp;annotation and the custom <code>[PriceMultipleOfHalf]</code> annotation. If the price is not a
                     multiple of 0.5, the custom error message will be shown.</p>
@@ -210,7 +206,6 @@ namespace MyApiProject.Controllers
         }
     }
 }`} />
-                <br></br>
                 <p>In this controller, <code>ModelState.IsValid</code> will validate both the built-in and custom
                     rules. If any validation fails, it will return a 400 response with the error message.</p>
             </Section>
@@ -231,7 +226,6 @@ namespace MyApiProject.Controllers
         }
     });
 });`} />
-                <br></br>
                 <p>This JavaScript code checks the price before submitting the form. If it’s not a multiple of 0.5,
                     an alert will be shown and the form submission will be prevented.</p>
             </Section>
