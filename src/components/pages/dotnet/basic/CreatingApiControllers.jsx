@@ -64,7 +64,7 @@ namespace MyApiProject.Controllers
 }`} />
                 <p>In this example:</p>
                 <ul>
-                    <li><strong>[Route("api/[controller]")]:</strong> Defines the base route for the controller. The
+                    <li><strong>[Route("api/[controller]")]:</strong> Defines the base route for the controller. The&nbsp;
                         <code>[controller]</code> part is automatically replaced by the controller name (without
                         "Controller").
                     </li>
@@ -203,7 +203,7 @@ public IActionResult DeleteProduct(int id)
                     </li>
                     <li><strong>Error Handling:</strong> Always handle errors gracefully with appropriate HTTP
                         status codes like 404 (Not Found), 400 (Bad Request), or 500 (Internal Server Error).</li>
-                    <li><strong>Use ActionResult&lt;T&gt;:</strong> Returning <code>ActionResult&lt;T&gt;&nbsp;</code>
+                    <li><strong>Use ActionResult&lt;T&gt;:</strong> Returning <code>ActionResult&lt;T&gt;</code>&nbsp;
                         instead of just <code>T</code> allows you to return different HTTP status codes (e.g.,
                         NotFound, BadRequest) with the response data.</li>
                 </ul>

@@ -85,7 +85,7 @@ export default function GettingStartedReact() {
                 </ul>
                 <CodeSnippet language="shell" code={`npm start`} />
                 <></>
-                <p>This command starts the server and opens your React application in the owser at <code>http://localhost:3000</code>.</p>
+                <p>This command starts the server and opens your React application in the browser at <code>http://localhost:3000</code>.</p>
             </Section>
 
             <Section>
@@ -104,7 +104,7 @@ function App() {
 
 export default App;`} />
                 <></>
-                <p>Save the file, and the owser will automatically reload with the updated content.</p>
+                <p>Save the file, and the browser will automatically reload with the updated content.</p>
             </Section>
 
             <Section>
@@ -138,7 +138,7 @@ function App() {
 
 export default App;`} />
                 <></>
-                <p>Save both files, and you should see your new component rendered in the owser.</p>
+                <p>Save both files, and you should see your new component rendered in the browser.</p>
             </Section>
 
             <Section>
@@ -146,7 +146,7 @@ export default App;`} />
                 <p>As you develop your React app, here are some tools and practices to help with debugging and optimizing your code:</p>
                 <ul>
                     <li><strong>Console Log:</strong> Use <code>console.log()</code> to inspect data and track state changes in React.</li>
-                    <li><strong>React DevTools:</strong> Install the React Developer Tools extension to inspect React components in your owser.</li>
+                    <li><strong>React DevTools:</strong> Install the React Developer Tools extension to inspect React components in your browser.</li>
                     <li><strong>Code Splitting:</strong> eak your app into smaller, manageable components to improve performance.</li>
                 </ul>
             </Section>

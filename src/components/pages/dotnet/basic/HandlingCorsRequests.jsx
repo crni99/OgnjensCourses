@@ -16,7 +16,7 @@ export default function HandlingCorsRequests() {
                 paragraph2="In modern web applications, it's common for the frontend and backend to be hosted on different
                     domains or ports. This scenario introduces a security concept known as Cross-Origin Resource Sharing
                     (CORS). When a client-side application (like a web app) hosted on one domain makes a request to an
-                    API hosted on another, the owser enforces the Same-Origin Policy to prevent cross-site scripting
+                    API hosted on another, the browser enforces the Same-Origin Policy to prevent cross-site scripting
                     attacks. CORS is the mechanism that allows web applications to securely make requests to APIs hosted
                     on different domains."
             />
@@ -25,7 +25,7 @@ export default function HandlingCorsRequests() {
                 <h2>Why CORS Is Important</h2>
                 <p><strong>CORS</strong> allows you to:</p>
                 <ul>
-                    <li><strong>Allow cross-origin requests:</strong> Without CORS, a owser will block frontend
+                    <li><strong>Allow cross-origin requests:</strong> Without CORS, a browser will block frontend
                         apps from accessing resources hosted on a different domain.</li>
                     <li><strong>Control which domains can access your API:</strong> CORS allows you to define which
                         external domains (origins) are permitted to interact with your API, protecting your server
@@ -80,7 +80,7 @@ export default function HandlingCorsRequests() {
 
             <Section>
                 <h2>Step 2: Handling CORS Preflight Requests</h2>
-                <p>A preflight request is sent by the owser before the actual request to verify whether the server
+                <p>A preflight request is sent by the browser before the actual request to verify whether the server
                     supports the requested CORS operation (especially with methods like PUT, DELETE, or custom
                     headers). You can handle preflight requests by ensuring your API responds correctly.</p>
 
@@ -129,7 +129,7 @@ export default function HandlingCorsRequests() {
                 <p>After configuring CORS, test it to ensure that cross-origin requests are correctly handled.</p>
                 <ul>
                     <li><strong>Test from the Frontend:</strong> From your frontend (e.g., React, Angular, Vue.js),
-                        make a request to your API using fetch or axios. If CORS is configured properly, the owser
+                        make a request to your API using fetch or axios. If CORS is configured properly, the browser
                         will allow the request.</li>
                     <CodeSnippet language="javascript" code={`fetch('https://yourapi.com/api/products', {
     method: 'GET',
@@ -141,7 +141,7 @@ export default function HandlingCorsRequests() {
 .then(data => console.log(data))
 .catch(error => console.error('Error:', error));`} />
 
-                    <li><strong>Check the owser Console:</strong> If CORS is misconfigured, the owser console
+                    <li><strong>Check the browser Console:</strong> If CORS is misconfigured, the browser console
                         will show CORS-related errors, which can help identify the issue (e.g., missing allowed
                         origin, method, or header).</li>
                 </ul>

@@ -27,7 +27,7 @@ export default function VersioningDocumentingApiSwagger() {
                         features or deprecating old ones) without eaking backward compatibility.</li>
                     <li><strong>API Documentation:</strong> Proper documentation helps consumers understand how to
                         interact with your API, what parameters to send, and what responses to expect. Interactive
-                        documentation also allows developers to test the API directly from the owser, reducing the
+                        documentation also allows developers to test the API directly from the browser, reducing the
                         learning curve and speeding up integration.</li>
                     <li><strong>Ensuring Consistency:</strong> With clear versioning and documentation, you provide
                         a clear contract for API consumers, making it easier to maintain consistency across multiple

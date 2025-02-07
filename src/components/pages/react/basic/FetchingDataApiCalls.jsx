@@ -10,7 +10,7 @@ export default function FetchingDataApiCalls() {
       <Lead
         title="Fetching Data and API Calls in React"
         paragraph1="Learn how to fetch data from APIs in React using different techniques to enhance the interactivity and data-driven nature of your applications."
-        paragraph2="Fetching data from external APIs is a crucial part of modern web development. React provides multiple approaches to handle data fetching, whether you're working with built-in owser features, third-party liaries, or React-specific hooks."
+        paragraph2="Fetching data from external APIs is a crucial part of modern web development. React provides multiple approaches to handle data fetching, whether you're working with built-in browser features, third-party liaries, or React-specific hooks."
       />
 
       <Section>

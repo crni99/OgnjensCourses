@@ -2,6 +2,16 @@ html {
     scroll-behavior: smooth;
 }
 
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.content {
+    flex-grow: 1;
+}
+
 .navbar {
     background-color: #2a2e32 !important;
 }
@@ -22,7 +32,7 @@ h2 {
 }
 
 h3 {
-    margin-top: 30px; 
+    margin-top: 30px;
 }
 
 p,
@@ -62,7 +72,7 @@ ol {
     color: #f8f8f2;
 }
 
-code {
+code:not(.code-snippet code) {
     font-size: initial !important;
     font-weight: bold;
 }
@@ -71,32 +81,97 @@ code {
     margin-bottom: 20px;
 }
 
-.token.keyword {
+pre.language-csharp .token.keyword {
     color: #569cd6;
 }
 
-.token.function {
+pre.language-csharp .token.function {
     color: #dcdcaa;
 }
 
-.token.string {
+pre.language-csharp .token.string {
     color: #ce9178;
 }
 
-.token.comment {
+pre.language-csharp .token.comment {
     color: #6a9955;
 }
 
-.token.variable {
+pre.language-csharp .token.variable {
     color: #9cdcfe;
 }
 
-.token.number {
+pre.language-csharp .token.number {
     color: #b5cea8;
 }
 
-.token.class-name {
+pre.language-csharp .token.class-name {
     color: #4ec9b0;
+}
+
+pre.language-jsx .token.keyword {
+    color: #569cd6;
+}
+
+pre.language-jsx .token.function {
+    color: #dcdcaa;
+}
+
+pre.language-jsx .token.string {
+    color: #ce9178;
+}
+
+pre.language-jsx .token.comment {
+    color: #6a9955;
+    font-style: italic;
+}
+
+pre.language-jsx .token.variable {
+    color: #9cdcfe;
+}
+
+pre.language-jsx .token.number {
+    color: #b5cea8;
+}
+
+pre.language-jsx .token.class-name {
+    color: #4ec9b0;
+}
+
+pre.language-jsx .token.punctuation {
+    color: #d4d4d4;
+}
+
+pre.language-jsx .token.operator {
+    color: #d4d4d4;
+}
+
+pre.language-jsx .token.tag {
+    color: #569cd6;
+}
+
+pre.language-jsx .token.attr-name {
+    color: #9cdcfe;
+}
+
+pre.language-jsx .token.attr-value {
+    color: #ce9178;
+}
+
+pre.language-jsx .token.jsx {
+    color: #d7ba7d;
+}
+
+pre.language-jsx .token.builtin {
+    color: #c586c0;
+}
+
+pre.language-json .token.property {
+    color: #cea762;
+}
+
+pre.language-json .token.string {
+    color: #d08158;
 }
 
 .lead {
@@ -256,6 +331,12 @@ pre[class*="language-"] {
 .custom-icon:active,
 .custom-icon:focus {
     color: #c52e76;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .page-navigation-container {

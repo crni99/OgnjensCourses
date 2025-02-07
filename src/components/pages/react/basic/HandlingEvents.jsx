@@ -116,7 +116,7 @@ function FormExample() {
 
 export default FormExample;`} />
         <></>
-        <p>In this form example, the <code>handleEmailChange</code> function updates the email state, and the <code>handleSubmit</code> function handles the form submission by preventing the default owser behavior and displaying an alert.</p>
+        <p>In this form example, the <code>handleEmailChange</code> function updates the email state, and the <code>handleSubmit</code> function handles the form submission by preventing the default browser behavior and displaying an alert.</p>
       </Section>
 
       <Section>

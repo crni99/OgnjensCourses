@@ -26,7 +26,7 @@ export default function ReactRouterNavigation() {
           <li><strong>Programmatic Navigation:</strong> Navigate between routes in response to user actions (like button clicks or form submissions).</li>
         </ul>
         <p>
-          With React Router, navigation becomes intuitive, enabling users to move between pages and views within a React app without reloading the owser.
+          With React Router, navigation becomes intuitive, enabling users to move between pages and views within a React app without reloading the Browser.
         </p>
       </Section>
 
@@ -36,15 +36,15 @@ export default function ReactRouterNavigation() {
         <CodeSnippet language="shell" code={`npm install react-router-dom`} />
         
         <p>
-          After installation, you will be ready to start utilizing React Router components like <code>owserRouter</code>, <code>Route</code>, <code>Switch</code>, and <code>Link</code> to implement client-side routing in your application.
+          After installation, you will be ready to start utilizing React Router components like <code>BrowserRouter</code>, <code>Route</code>, <code>Switch</code>, and <code>Link</code> to implement client-side routing in your application.
         </p>
       </Section>
 
       <Section>
         <h2>Setting Up Basic Routing</h2>
-        <p>First, to implement basic routing, you must wrap your entire application inside a <code>owserRouter</code> component. This will allow React Router to manage the URL and history for the app.</p>
+        <p>First, to implement basic routing, you must wrap your entire application inside a <code>BrowserRouter</code> component. This will allow React Router to manage the URL and history for the app.</p>
         <CodeSnippet language="jsx" code={`import React from 'react';
-import { owserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 
@@ -62,7 +62,7 @@ function App() {
 export default App;`} />
         
         <p>
-          In the above example, we use <code>owserRouter</code> (aliased as <code>Router</code>) to wrap the app and enable React Router functionality. Inside <code>owserRouter</code>, the <code>Switch</code> component ensures that only the first matching <code>Route</code> is rendered. The <code>exact</code> prop on the home route ensures it only matches the root path.
+          In the above example, we use <code>BrowserRouter</code> (aliased as <code>Router</code>) to wrap the app and enable React Router functionality. Inside <code>owserRouter</code>, the <code>Switch</code> component ensures that only the first matching <code>Route</code> is rendered. The <code>exact</code> prop on the home route ensures it only matches the root path.
         </p>
       </Section>
 
@@ -125,7 +125,7 @@ export default RedirectButton;`} />
           React Router also supports nested routing, which is useful for creating complex layouts where certain sections (e.g., sidebars) have their own independent routes within a parent layout.
         </p>
         <CodeSnippet language="jsx" code={`import React from 'react';
-import { owserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function Dashboard() {
   return (

@@ -59,7 +59,7 @@ export default MyComponent;`} />
 
             <Section>
                 <h2>JSX Elements Are Just Objects</h2>
-                <p>JSX code is not directly rendered to the owser. React takes the JSX code and transforms it into regular JavaScript objects. For example, the JSX code:</p>
+                <p>JSX code is not directly rendered to the browser. React takes the JSX code and transforms it into regular JavaScript objects. For example, the JSX code:</p>
                 <CodeSnippet language="jsx" code={`const element = <h1>Hello, world!</h1>;`} />
                 <></>
                 <p>is actually converted to something like:</p>
@@ -112,7 +112,7 @@ export default MyComponent;`} />
                 <p>Here are some best practices to follow when using JSX:</p>
                 <ul>
                     <li>Use self-closing tags for elements that don’t have children, e.g., <code>&lt;img /&gt;</code>, <code>&lt; /&gt;</code>.</li>
-                    <li>Always return a single parent element in a component. You can use <code>&lt;div&gt;</code>, <code>&lt;Fragment&gt;</code>, or React’s <code>&lt;</code> shorthand to wrap multiple elements.</li>
+                    <li>Always return a single parent element in a component. You can use <code>&lt;div&gt;</code>, <code>&lt;Fragment&gt;</code>, or React’s <code>&lt;&gt; &lt;/&gt;</code> shorthand to wrap multiple elements.</li>
                     <li>Indent your JSX properly to keep it readable and maintainable.</li>
                 </ul>
             </Section>

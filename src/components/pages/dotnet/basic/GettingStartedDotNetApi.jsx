@@ -99,7 +99,7 @@ export default function GettingStartedDotNetApi() {
                         <code>https://localhost:5001</code> for HTTPS).
                     </li>
                 </ul>
-                <p>Open your owser and navigate to <code>https://localhost:5001/weatherforecast</code> to see the
+                <p>Open your browser and navigate to <code>https://localhost:5001/weatherforecast</code> to see the
                     default API in action. You should see a JSON response with mock weather data.</p>
             </Section>
 
@@ -158,7 +158,7 @@ namespace MyApiProject.Controllers
             <Section>
                 <h2>Step 7: Test the API Endpoints</h2>
                 <p>After adding the new controller, run the application again (press F5).</p>
-                <p>Open your owser or a tool like Postman.</p>
+                <p>Open your browser or a tool like Postman.</p>
                 <ul>
                     <li>To retrieve the list of products, make a GET request to&nbsp;
                         <code>https://localhost:5001/api/products</code>.

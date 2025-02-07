@@ -195,7 +195,7 @@ public class ProductsController : ControllerBase
 
                 <h3>Step 1: Install the Output Caching Package</h3>
                 <p>For output caching in .NET, you can use the <code>Microsoft.AspNetCore.ResponseCaching</code>
-                    package.</p>
+                    &nbsp;package.</p>
                 <CodeSnippet language="shell" code={`dotnet add package Microsoft.AspNetCore.ResponseCaching`} />
                 <h3>Step 2: Configure Response Caching</h3>
                 <CodeSnippet language="csharp" code={`public void ConfigureServices(IServiceCollection services)

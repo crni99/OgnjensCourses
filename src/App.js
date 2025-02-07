@@ -11,29 +11,33 @@ import BackendHome from './components/pages/BackendHome.jsx';
 import FrontendHome from './components/pages/FrontendHome.jsx';
 import DatabaseHome from './components/pages/DatabaseHome.jsx';
 import { CourseCategories } from './utils/const.js';
+import PageNotFound from './components/pages/PageNotFound.jsx';
 
 function App() {
 
   return (
     <>
       <ErrorBoundary>
-        <Header />
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path={CourseCategories.BACKEND} element={<BackendHome />} />
-                <Route path={CourseCategories.FRONTEND} element={<FrontendHome />} />
-                <Route path={CourseCategories.DATABASE} element={<DatabaseHome />} />
-                {NetApiBasicsRoutes}
-                {ReactBasicsRoutes}
-                {SQLBasicsRoutes}
-              </Routes>
+        <div className="page-container">
+          <Header />
+          <div className="container content">
+            <div className="row">
+              <div className="col-12">
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="*" element={<PageNotFound />} />
+                  <Route path={CourseCategories.BACKEND} element={<BackendHome />} />
+                  <Route path={CourseCategories.FRONTEND} element={<FrontendHome />} />
+                  <Route path={CourseCategories.DATABASE} element={<DatabaseHome />} />
+                  {NetApiBasicsRoutes}
+                  {ReactBasicsRoutes}
+                  {SQLBasicsRoutes}
+                </Routes>
+              </div>
             </div>
           </div>
+          <Footer />
         </div>
-        <Footer />
       </ErrorBoundary>
     </>
   );
