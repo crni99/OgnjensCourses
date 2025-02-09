@@ -95,6 +95,7 @@ pre.language-csharp .token.string {
 
 pre.language-csharp .token.comment {
     color: #6a9955;
+    font-style: italic;
 }
 
 pre.language-csharp .token.variable {
@@ -173,6 +174,109 @@ pre.language-json .token.property {
 pre.language-json .token.string {
     color: #d08158;
 }
+
+pre.language-javascript .token.keyword {
+    color: #569cd6;
+}
+
+pre.language-javascript .token.function {
+    color: #dcdc9d;
+}
+
+pre.language-javascript .token.string {
+    color: #ce9178;
+}
+
+pre.language-javascript .token.comment {
+    color: #75715e;
+    font-style: italic;
+}
+
+pre.language-javascript .token.variable {
+    color: #a6e22e;
+}
+
+pre.language-javascript .token.number {
+    color: #b5cea8;
+}
+
+pre.language-javascript .token.operator {
+    color: #f8f8f2;
+}
+
+pre.language-javascript .token.boolean {
+    color: #fd971f;
+}
+
+pre.language-javascript .token.parameter {
+    color: #9cdcfe;
+}
+
+pre.language-javascript .token.punctuation {
+    color: #ffd700;
+}
+
+code.language-javascript {
+    color: #9cdcfe;
+}
+
+pre.language-sql .token.keyword {
+    color: #569cd6;
+}
+
+pre.language-sql .token.function {
+    color: #dcdcaa;
+}
+
+pre.language-sql .token.string {
+    color: #ce9178;
+}
+
+pre.language-sql .token.comment {
+    color: #6a9955;
+    font-style: italic;
+}
+
+pre.language-sql .token.variable {
+    color: #9cdcfe;
+}
+
+pre.language-sql .token.number {
+    color: #b5cea8;
+}
+
+pre.language-sql .token.class-name {
+    color: #4ec9b0;
+}
+
+pre.language-sql .token.punctuation {
+    color: #d4d4d4;
+}
+
+pre.language-sql .token.operator {
+    color: #d4d4d4;
+}
+
+pre.language-sql .token.tag {
+    color: #569cd6;
+}
+
+pre.language-sql .token.attr-name {
+    color: #9cdcfe;
+}
+
+pre.language-sql .token.attr-value {
+    color: #ce9178;
+}
+
+pre.language-sql .token.sql {
+    color: #d7ba7d;
+}
+
+pre.language-sql .token.builtin {
+    color: #c586c0;
+}
+
 
 .lead {
     font-size: 1.25rem;
