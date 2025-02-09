@@ -84,7 +84,7 @@ export default function ScalingOptimizingApi() {
                 </ul>
 
                 <h3>b. Microservices Architecture</h3>
-                <p>Consider eaking your API down into smaller, independently scalable services.</p>
+                <p>Consider breaking your API down into smaller, independently scalable services.</p>
 
                 <h3>c. API Gateways</h3>
                 <p>API gateways can help manage requests between clients and microservices.</p>

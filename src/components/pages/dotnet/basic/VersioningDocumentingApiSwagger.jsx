@@ -24,7 +24,7 @@ export default function VersioningDocumentingApiSwagger() {
                     <li><strong>API Versioning:</strong> Over time, APIs evolve. Changes can eak existing
                         functionality, and to ensure that clients using older versions of your API continue to work
                         smoothly, versioning is necessary. Versioning allows you to make changes (e.g., adding new
-                        features or deprecating old ones) without eaking backward compatibility.</li>
+                        features or deprecating old ones) without breaking backward compatibility.</li>
                     <li><strong>API Documentation:</strong> Proper documentation helps consumers understand how to
                         interact with your API, what parameters to send, and what responses to expect. Interactive
                         documentation also allows developers to test the API directly from the browser, reducing the

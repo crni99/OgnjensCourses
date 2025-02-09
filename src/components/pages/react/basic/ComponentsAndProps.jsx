@@ -10,7 +10,7 @@ export default function ComponentsAndProps() {
       <Lead
         title="Components and Props"
         paragraph1="Learn how to create reusable components in React and pass data to them using props. Components are the building blocks of a React application, and props allow data to flow from parent to child components."
-        paragraph2="Components are the core of React. They allow you to eak down the UI into independent, reusable pieces. Props are used to pass data to these components, enabling dynamic rendering and interaction."
+        paragraph2="Components are the core of React. They allow you to break down the UI into independent, reusable pieces. Props are used to pass data to these components, enabling dynamic rendering and interaction."
       />
 
       <Section>

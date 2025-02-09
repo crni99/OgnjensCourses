@@ -15,7 +15,7 @@ export default function TestingReactComponents() {
 
             <Section>
                 <h2>Why Testing is Important</h2>
-                <p>Writing tests for your components helps ensure that your application behaves as expected. It also makes your code more maintainable by catching bugs early and ensuring that new changes do not eak existing functionality. Unit tests are especially useful when working in teams or on large projects, as they allow for confident refactoring and scaling of applications.</p>
+                <p>Writing tests for your components helps ensure that your application behaves as expected. It also makes your code more maintainable by catching bugs early and ensuring that new changes do not break existing functionality. Unit tests are especially useful when working in teams or on large projects, as they allow for confident refactoring and scaling of applications.</p>
                 <p>In React, we focus on testing individual components, their interactions, and how they render UI based on different inputs or states.</p>
                 <p>Testing also helps improve the reliability of your app by confirming that each part of the UI and business logic performs as intended under various conditions.</p>
             </Section>

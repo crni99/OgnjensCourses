@@ -147,7 +147,7 @@ export default App;`} />
                 <ul>
                     <li><strong>Console Log:</strong> Use <code>console.log()</code> to inspect data and track state changes in React.</li>
                     <li><strong>React DevTools:</strong> Install the React Developer Tools extension to inspect React components in your browser.</li>
-                    <li><strong>Code Splitting:</strong> eak your app into smaller, manageable components to improve performance.</li>
+                    <li><strong>Code Splitting:</strong> Break your app into smaller, manageable components to improve performance.</li>
                 </ul>
             </Section>
 

@@ -175,7 +175,7 @@ namespace MyApiProject.Controllers
                 <p>As you develop your API, debugging is an essential step. Visual Studio provides excellent
                     debugging tools:</p>
                 <ul>
-                    <li><strong>eakpoints:</strong> Click on the left margin next to the line of code where you
+                    <li><strong>Breakpoints:</strong> Click on the left margin next to the line of code where you
                         want to pause execution.</li>
                     <li><strong>Watch Variables:</strong> View and inspect variables while debugging.</li>
                     <li><strong>Call Stack:</strong> Inspect the call stack to see the execution flow.</li>
