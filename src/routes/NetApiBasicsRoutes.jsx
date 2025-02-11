@@ -1,6 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { RouteList } from '../utils/consts/ConstDotNet';
+import { RouteList } from '../utils/consts/ConstDotNetBasic';
 
 const NetApiBasicsRoutes = (
     <>

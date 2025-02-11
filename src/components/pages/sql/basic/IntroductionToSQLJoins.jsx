@@ -2,7 +2,7 @@ import Lead from "../../../common/Lead";
 import Section from "../../../common/Section";
 import CodeSnippet from '../../../common/CodeSnippet';
 import PageNavigation from "../../../common/PageNavigation";
-import { RoutePath } from "../../../../utils/consts/ConstSQL";
+import { RoutePath } from "../../../../utils/consts/ConstSQLBasic";
 
 export default function SQLJoins() {
 

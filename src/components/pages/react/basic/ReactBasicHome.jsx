@@ -1,6 +1,6 @@
 import HomeSection from "../../../common/HomeSection";
 import Lead from "../../../common/Lead";
-import { RoutePath } from "../../../../utils/consts/ConstReact";
+import { RoutePath } from "../../../../utils/consts/ConstReactBasic";
 
 export default function ReactBasicHome() {
     return (

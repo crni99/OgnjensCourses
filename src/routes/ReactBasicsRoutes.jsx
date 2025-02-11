@@ -1,6 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { RouteList } from '../utils/consts/ConstReact';
+import { RouteList } from '../utils/consts/ConstReactBasic';
 
 const ReactBasicsRoutes = (
     <>

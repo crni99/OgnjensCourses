@@ -12,6 +12,7 @@ import FrontendHome from './components/pages/FrontendHome.jsx';
 import DatabaseHome from './components/pages/DatabaseHome.jsx';
 import { CourseCategories } from './utils/const.js';
 import PageNotFound from './components/pages/PageNotFound.jsx';
+import SQLAdvancedRoutes from './routes/SQLAdvancedRoutes.jsx';
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
                   {NetApiBasicsRoutes}
                   {ReactBasicsRoutes}
                   {SQLBasicsRoutes}
+                  {SQLAdvancedRoutes}
                 </Routes>
               </div>
             </div>

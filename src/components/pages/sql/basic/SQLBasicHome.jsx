@@ -1,6 +1,6 @@
 import HomeSection from "../../../common/HomeSection";
 import Lead from "../../../common/Lead";
-import { RoutePath } from "../../../../utils/consts/ConstSQL";
+import { RoutePath } from "../../../../utils/consts/ConstSQLBasic";
 
 export default function SqlBasicHome() {
     return (

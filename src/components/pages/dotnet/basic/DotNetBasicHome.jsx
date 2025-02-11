@@ -1,6 +1,6 @@
 import HomeSection from "../../../common/HomeSection";
 import Lead from "../../../common/Lead";
-import { RoutePath } from "../../../../utils/consts/ConstDotNet";
+import { RoutePath } from "../../../../utils/consts/ConstDotNetBasic";
 
 export default function DotNetBasicHome() {
     return (

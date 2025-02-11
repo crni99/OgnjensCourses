@@ -2,7 +2,7 @@ import Lead from "../../../common/Lead";
 import Section from "../../../common/Section";
 import CodeSnippet from '../../../common/CodeSnippet';
 import PageNavigation from "../../../common/PageNavigation";
-import { RoutePath } from "../../../../utils/consts/ConstDotNet";
+import { RoutePath } from "../../../../utils/consts/ConstDotNetBasic";
 
 export default function ManipulatingResourcesValidatingInput() {
 

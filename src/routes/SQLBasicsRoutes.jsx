@@ -1,6 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { RouteList } from '../utils/consts/ConstSQL';
+import { RouteList } from '../utils/consts/ConstSQLBasic';
 
 const SQLBasicsRoutes = (
     <>
