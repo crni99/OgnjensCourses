@@ -16,6 +16,12 @@ body {
     background-color: #2a2e32 !important;
 }
 
+.theme-toggle-icon {
+    font-size: 1.3rem !important;
+    line-height: 1 !important;
+    padding: 8px !important;
+}
+
 body {
     font-family: 'Inter', sans-serif;
 }
@@ -463,7 +469,7 @@ pre[class*="language-"] {
     max-width: 200px;
     width: 100%;
     margin-bottom: 1rem;
-    background-color: #d63384;
+    background-color: #d63384 !important;
     color: white;
     border: none;
     font-size: 1rem;
@@ -474,7 +480,24 @@ pre[class*="language-"] {
 }
 
 .page-navigation-button:hover {
-    background-color: #b02a6b;
+    background-color: #b02a6b !important;
+}
+
+.page-navigation-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(214, 51, 132, 0.5) !important;
+}
+
+.page-navigation-button:active {
+    background-color: #a0265e !important;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.page-navigation-button:disabled,
+.page-navigation-button[disabled] {
+    background-color: #e573a0 !important;
+    cursor: not-allowed;
+    opacity: 0.65;
 }
 
 .page-navigation-button.mb-md-0 {

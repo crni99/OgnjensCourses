@@ -4,50 +4,32 @@ import GroupItemFrontend from './GroupItemFrontend';
 import GroupItemDatabases from './GroupItemDatabase';
 
 export default function Header() {
-
-    const [isDarkMode, setIsDarkMode] = useState(true);
+    const [isDarkMode, setIsDarkMode] = useState(() => {
+        return localStorage.getItem("theme") === "dark" ||
+               (!localStorage.getItem("theme") && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    });
 
     useEffect(() => {
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            setIsDarkMode(savedTheme === 'dark');
-        }
-        if (isDarkMode) {
-            document.body.classList.add('bg-dark');
-            document.body.classList.remove('bg-light');
-            document.body.classList.add('text-light');
-            document.body.classList.remove('text-dark');
+        localStorage.setItem("theme", isDarkMode ? "dark" : "light");
 
-            const dropdownMenus = document.querySelectorAll('.dropdown-menu');
-            dropdownMenus.forEach(menu => {
-                menu.classList.add('dropdown-menu-dark');
-            });
-        } else {
-            document.body.classList.add('bg-light');
-            document.body.classList.remove('bg-dark');
-            document.body.classList.add('text-dark');
-            document.body.classList.remove('text-light');
+        document.body.classList.toggle("bg-dark", isDarkMode);
+        document.body.classList.toggle("bg-light", !isDarkMode);
+        document.body.classList.toggle("text-light", isDarkMode);
+        document.body.classList.toggle("text-dark", !isDarkMode);
 
-            const dropdownMenus = document.querySelectorAll('.dropdown-menu');
-            dropdownMenus.forEach(menu => {
-                menu.classList.remove('dropdown-menu-dark');
-            });
-        }
+        document.querySelectorAll(".dropdown-menu").forEach(menu => {
+            menu.classList.toggle("dropdown-menu-dark", isDarkMode);
+        });
     }, [isDarkMode]);
 
-
-    const toggleTheme = () => {
-        const newTheme = !isDarkMode ? 'dark' : 'light';
-        localStorage.setItem('theme', newTheme);
-        setIsDarkMode(!isDarkMode);
-    };
+    const toggleTheme = () => setIsDarkMode(prev => !prev);
 
     return (
         <header>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm mb-3">
                 <div className="container">
                     <a className="navbar-brand" href="/">Ognjen's Courses</a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
@@ -57,14 +39,14 @@ export default function Header() {
                             <GroupItemDatabases />
                         </ul>
                     </div>
+                    <button
+                        onClick={toggleTheme}
+                        className={`theme-toggle-icon btn ${isDarkMode ? "btn-light" : "btn-dark"} ms-3 me-3`}
+                        aria-label="Toggle theme"
+                    >
+                        {isDarkMode ? "🌞" : "🌙"}
+                    </button>
                 </div>
-                <button
-                    onClick={toggleTheme}
-                    className={`btn ${isDarkMode ? 'btn-light' : 'btn-dark'} ms-3 me-3`}
-                    aria-label="Toggle theme"
-                >
-                    {isDarkMode ? '🌞 Light Mode' : '🌙 Dark Mode'}
-                </button>
             </nav>
         </header>
     );
