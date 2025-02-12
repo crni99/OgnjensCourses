@@ -30,6 +30,17 @@
 
   <link rel="preload" href="%PUBLIC_URL%/logo192.avif" as="image" type="image/avif" />
 
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://cdn.jsdelivr.net;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net;
+    font-src 'self' https://fonts.gstatic.com;
+    img-src 'self' data: https://cdn.jsdelivr.net;
+    connect-src 'self' https://www.googletagmanager.com;
+    frame-src 'none';
+    object-src 'none';
+  ">
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DYVZLSQ50W"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -42,7 +53,7 @@
 </head>
 
 <body class="bg-dark text-light">
-  
+
   <noscript>You need to enable JavaScript to run this app.</noscript>
 
   <div id="root"></div>
