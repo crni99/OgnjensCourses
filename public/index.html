@@ -39,8 +39,6 @@
     gtag('config', 'G-DYVZLSQ50W');
   </script>
 
-  <meta name="google-adsense-account" content="ca-pub-3073410099502815">
-
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3073410099502815"
     crossorigin="anonymous"></script>
 
@@ -93,8 +91,8 @@
         var c = c === void 0 ? 0 : c; a = Ta(a, b); if (a != null) if (b = typeof a, b === "number" ? Number.isFinite(a) : b !== "string" ? 0 : Ka.test(a)) if (typeof a === "number") { if (a = Math.trunc(a), !Number.isSafeInteger(a)) { Ga(a); b = M; var d = N; if (a = d & 2147483648) b = ~b + 1 >>> 0, d = ~d >>> 0, b == 0 && (d = d + 1 >>> 0); b = d * 4294967296 + (b >>> 0); a = a ? -b : b } } else if (b = Math.trunc(Number(a)), Number.isSafeInteger(b)) a = String(b); else {
           if (b = a.indexOf("."), b !== -1 && (a = a.substring(0, b)), !(a[0] === "-" ? a.length < 20 || a.length === 20 && Number(a.substring(0, 7)) > -922337 :
             a.length < 19 || a.length === 19 && Number(a.substring(0, 6)) < 922337)) {
-              if (a.length < 16) Ga(Number(a)); else if (E()) a = BigInt(a), M = Number(a & BigInt(4294967295)) >>> 0, N = Number(a >> BigInt(32) & BigInt(4294967295)); else { b = +(a[0] === "-"); N = M = 0; d = a.length; for (var e = b, f = (d - b) % 6 + b; f <= d; e = f, f += 6)e = Number(a.slice(e, f)), N *= 1E6, M = M * 1E6 + e, M >= 4294967296 && (N += Math.trunc(M / 4294967296), N >>>= 0, M >>>= 0); b && (b = n(Ha(M, N)), a = b.next().value, b = b.next().value, M = a, N = b) } a = M; b = N; b & 2147483648 ? E() ? a = "" + (BigInt(b | 0) << BigInt(32) | BigInt(a >>> 0)) : (b =
-                n(Ha(a, b)), a = b.next().value, b = b.next().value, a = "-" + Ia(a, b)) : a = Ia(a, b)
+            if (a.length < 16) Ga(Number(a)); else if (E()) a = BigInt(a), M = Number(a & BigInt(4294967295)) >>> 0, N = Number(a >> BigInt(32) & BigInt(4294967295)); else { b = +(a[0] === "-"); N = M = 0; d = a.length; for (var e = b, f = (d - b) % 6 + b; f <= d; e = f, f += 6)e = Number(a.slice(e, f)), N *= 1E6, M = M * 1E6 + e, M >= 4294967296 && (N += Math.trunc(M / 4294967296), N >>>= 0, M >>>= 0); b && (b = n(Ha(M, N)), a = b.next().value, b = b.next().value, M = a, N = b) } a = M; b = N; b & 2147483648 ? E() ? a = "" + (BigInt(b | 0) << BigInt(32) | BigInt(a >>> 0)) : (b =
+              n(Ha(a, b)), a = b.next().value, b = b.next().value, a = "-" + Ia(a, b)) : a = Ia(a, b)
           }
         } else a = void 0; return a != null ? a : c
       } function R(a, b) { var c = c === void 0 ? "" : c; a = Za(a, b); return a != null ? a : c }; var S; function T(a, b, c) { this.h = P(a, b, c) } T.prototype.toJSON = function () { return ab(this) }; T.prototype.s = K; T.prototype.toString = function () { try { return S = !0, ab(this).toString() } finally { S = !1 } };
@@ -102,7 +100,7 @@
         var b = S ? a.h : Pa(a.h, Qa, void 0, void 0, !1); var c = !S; var d = pa ? void 0 : a.constructor.v; var e = I(c ? a.h : b); if (a = b.length) {
           var f = b[a - 1], g = Ea(f); g ? a-- : f = void 0; e = +!!(e & 512) - 1; var h = b; if (g) { b: { var k = f; var m = {}; g = !1; if (k) for (var r in k) if (Object.prototype.hasOwnProperty.call(k, r)) if (isNaN(+r)) m[r] = k[r]; else { var y = k[r]; Array.isArray(y) && (L(y, d, +r) || Da(y) && y.size === 0) && (y = null); y == null && (g = !0); y != null && (m[r] = y) } if (g) { for (var Q in m) break b; m = null } else m = k } k = m == null ? f != null : m !== f } for (var ia; a > 0; a--) {
             Q =
-            a - 1; r = h[Q]; Q -= e; if (!(r == null || L(r, d, Q) || Da(r) && r.size === 0)) break; ia = !0
+              a - 1; r = h[Q]; Q -= e; if (!(r == null || L(r, d, Q) || Da(r) && r.size === 0)) break; ia = !0
           } if (h !== b || k || ia) { if (!c) h = Array.prototype.slice.call(h, 0, a); else if (ia || k || m) h.length = a; m && h.push(m) } b = h
         } return b
       }; function bb(a) { return function (b) { if (b == null || b == "") b = new a; else { b = JSON.parse(b); if (!Array.isArray(b)) throw Error("dnarr"); za(b, 32); b = La(a, b) } return b } }; function cb(a) { this.h = P(a) } t(cb, T); var db = bb(cb); var U; function V(a) { this.g = a } V.prototype.toString = function () { return this.g + "" }; var eb = {}; function fb(a) { if (U === void 0) { var b = null; var c = u.trustedTypes; if (c && c.createPolicy) { try { b = c.createPolicy("goog#html", { createHTML: w, createScript: w, createScriptURL: w }) } catch (d) { u.console && u.console.error(d.message) } U = b } else U = b } a = (b = U) ? b.createScriptURL(a) : a; return new V(a, eb) };/*
