@@ -433,7 +433,6 @@ pre[class*="language-"] {
     transition: color 0.3s ease;
 }
 
-/* Hover effect */
 .custom-icon:hover {
     color: #d63384;
 }
