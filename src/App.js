@@ -10,9 +10,11 @@ import Home from './components/common/Home.jsx';
 import BackendHome from './components/pages/BackendHome.jsx';
 import FrontendHome from './components/pages/FrontendHome.jsx';
 import DatabaseHome from './components/pages/DatabaseHome.jsx';
-import { CourseCategories } from './utils/const.js';
+import { CourseCategories, CoursesPaths } from './utils/const.js';
 import PageNotFound from './components/pages/PageNotFound.jsx';
 import SQLAdvancedRoutes from './routes/SQLAdvancedRoutes.jsx';
+import DotNetAdvancedHome from './components/pages/dotnet/advanced/DotNetAdvancedHome.jsx';
+import ReactAdvancedHome from './components/pages/react/advanced/ReactAdvancedHome.jsx';
 
 function App() {
 
@@ -28,7 +30,9 @@ function App() {
                   <Route path="/" element={<Home />} />
                   <Route path="*" element={<PageNotFound />} />
                   <Route path={CourseCategories.BACKEND} element={<BackendHome />} />
+                  <Route path={CoursesPaths.NET_API_ADVANCED} element={<DotNetAdvancedHome />} />
                   <Route path={CourseCategories.FRONTEND} element={<FrontendHome />} />
+                  <Route path={CoursesPaths.REACT_ADVANCED} element={<ReactAdvancedHome />} />
                   <Route path={CourseCategories.DATABASE} element={<DatabaseHome />} />
                   {NetApiBasicsRoutes}
                   {ReactBasicsRoutes}
